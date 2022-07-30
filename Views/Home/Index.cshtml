@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "";
+}
+@section styles
+{
+    <link rel="stylesheet" href="~/css/Responsive.css"/>
+    <link rel="stylesheet" href="~/css/NavStyles.css"/>
+    <style>
+        .positionBody
+        {
+            position:absolute;
+            top: 60px;
+            right:0px;
+            left:16%;
+            margin-left:18px;
+            width: 82%;
+        }
+        .hr
+        {
+            margin-top:10px !important;
+            margin:0;
+            left:17%;
+            width:auto;
+        }
+        .videoBody
+        {
+            top:80px !important;
+            background-color:#f8f9fa;
+        }
+        .collapsed_expand .positionBody
+        {
+            width:auto;
+            left:0%;
+        }
+    </style>
+}
+<div class="nav_bar">
+    <vc:side-bar-section section-string="first section 2"></vc:side-bar-section>
+    @Html.Partial("Components/SideBarSection/TopBarPartial")
+    <hr class="positionBody hr" />
+    <div class="positionBody videoBody">
+        @Html.Partial("Videos")
+    </div>
+</div>
+
+<script>
+$('.MenuIcon').click(function(e)
+{
+    $('.nav_bar').toggleClass('collapsed_expand');
+});
+</script>
