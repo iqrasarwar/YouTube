@@ -10,6 +10,7 @@
     flex-direction: column !important;
     gap: 0 !important;
     margin: 0 !important;
+    margin-bottom: 7px !important;
     height: 50px !important;
     width: auto !important;
   }
@@ -30,8 +31,22 @@
   }
 }
 @media (max-width: 1024px) {
+  .sidebar {
+    width: 12% !important;
+  }
+  .positionBody {
+    width: 88% !important;
+    left: 12% !important;
+  }
   .sidebar_hr {
     display: none;
+  }
+  .Logos {
+    width: auto !important;
+    padding-left: 26px !important;
+  }
+  .nav_bar_fixed {
+    left: 18% !important;
   }
 }
 @media (max-width: 800px) {

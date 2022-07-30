@@ -208,8 +208,8 @@ h6 {
 }
 .collapsed_expand .positionBody {
   margin-left: 0;
-  width: auto;
-  left: 0%;
+  width: auto !important;
+  left: 0% !important;
 }
 
 /* NAV STYLES
