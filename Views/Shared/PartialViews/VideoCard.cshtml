@@ -1,0 +1,36 @@
+﻿@{
+    string column = " column";
+}
+@if(column != " column")
+{
+    <div class="card col-lg-3 col-md-4 col-sm-6" >
+      <img class="card-img-top" src="~/css/images/profile.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h6 class="video-title">Partial Views Tutorial In DotNet | C# | Web Developmet </h6>
+        <p class="video-channel">Learn DotNet</p>
+        <p>
+            <span class="video-views">30k Views</span>
+            <span class="dot">.</span>
+            <span class="video-time">7 days ago</span>
+        </p>
+      </div>
+    </div>
+}
+else
+{
+    <div class="card columnCard col-lg-3 col-md-4 col-sm-6" >
+  <img class="card-img-top" src="~/css/images/profile.jpg" alt="Card image cap">
+  <div class="card-body">
+    <img class="channel-pic" src="~/css/images/profile.jpg" />
+    <div class="video-info">
+        <h6 class="video-title">Partial Views Tutorial In DotNet | C# | Web Developmet </h6>
+        <p class="video-channel">Learn DotNet</p>
+        <p class="video-views video-time">
+            30k Views
+            <span class="dot">.</span>
+            7 days ago
+        </p>
+    </div>
+  </div>
+</div>
+}

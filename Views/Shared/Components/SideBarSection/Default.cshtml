@@ -1,30 +1,4 @@
-﻿<style>
-    .sidebar
-    {
-        width:16%;
-        overflow-y:auto;
-        overflow-x:hidden;
-        position:fixed;
-    }
-    .Logos
-    {
-        display: flex;
-        box-sizing: border-box;
-        flex-direction: row;
-        width: 16%;
-        height: 40px;
-        gap:18px;
-        align-items: center;
-        padding: 6px 14px;
-        margin:6px;
-    }
-    .collapsed_bar 
-    {
-        width:0%;
-        display:none;
-    }
-</style>
-<div class="navBarWrapper">
+﻿<div class="navBarWrapper">
     <div class="Logos">
         <img
             src="~/css/images/Hamburger-Menü.png"
@@ -35,13 +9,13 @@
     </div>
     <div class="sidebar">
         @Html.Partial("Components/SideBarSection/Actions")
-        <hr class="hr" />
-        @Html.Partial("Footer")
+        <hr class="sidebar_hr" />
+        @Html.Partial("PartialViews/Footer")
     </div>
 </div>
 
 <script>
-$('.MenuIcon').click(function(e) 
+$('.MenuIcon').click(function(e)
 {
     $('.sidebar').toggleClass('collapsed_bar');
 });

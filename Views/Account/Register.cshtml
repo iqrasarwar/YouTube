@@ -11,8 +11,9 @@
         rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="~/css/SignUp.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/AccountStylescss" asp-append-version="true" />
 }
+
 <div class="body">
     <div class="container">
         <div class="row">
@@ -74,11 +75,14 @@
     </div>
 </div>
 
-<script>
-    if(@ViewBag.valid)
-    {
-            $(document).ready(function(){
-                $("#myModal").modal('show');
-            });
-    }
-</script>
+@section Scripts
+{
+    <script>
+        if(@ViewBag.valid)
+        {
+                $(document).ready(function(){
+                    $("#myModal").modal('show');
+                });
+        }
+    </script>
+}
