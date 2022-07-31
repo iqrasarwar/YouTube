@@ -42,11 +42,16 @@
     display: none;
   }
   .Logos {
-    width: auto !important;
+    width: 18% !important;
     padding-left: 26px !important;
+    gap: 9px !important;
   }
   .nav_bar_fixed {
     left: 18% !important;
+    min-width: 82% !important;
+  }
+  .Bar {
+    padding-left: 60px;
   }
 }
 @media (max-width: 800px) {
@@ -57,25 +62,63 @@
     display: none;
   }
   .SearchIcon {
-    background-color: transparent;
-    border: none;
-    padding-top: 3px;
+    background-color: transparent !important;
+    border: none !important;
+    padding-top: 3px !important;
   }
   .TopBar {
-    justify-content: right;
+    justify-content: right !important;
   }
   .NavBarActions {
-    margin-left: 10px;
-  }
-  .Logos {
-    margin-top: 6px !important;
+    margin-left: 10px !important;
   }
 }
-@media (max-width: 420px) {
-  .NavBarActions {
+@media (max-width: 768px) {
+  .Action p {
     display: none;
   }
+  .sidebar {
+    width: 4% !important;
+  }
+  .positionBody {
+    width: 96% !important;
+    left: 4% !important;
+  }
   .Action {
-    display: none;
+    padding: 5px 0 0 0 !important;
+  }
+  .Logos {
+    padding: 0 !important;
+  }
+  .MenuIcon {
+    margin-left: 4px !important;
+  }
+}
+@media (max-width: 425px) {
+  .nav_bar_fixed {
+    left: 35% !important;
+    min-width: 65% !important;
+  }
+  .Logos {
+    width: 35% !important;
+  }
+  .NavBarActions {
+    display: none !important;
+  }
+  .sidebar {
+    width: 7% !important;
+  }
+  .positionBody {
+    width: 93% !important;
+    left: 7% !important;
+  }
+}
+@media (max-width: 320px) {
+  .nav_bar_fixed {
+    left: 50% !important;
+    min-width: 50% !important;
+  }
+  .Logos {
+    width: 50% !important;
   }
 }
