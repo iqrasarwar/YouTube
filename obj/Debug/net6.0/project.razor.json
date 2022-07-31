@@ -14277,6 +14277,23 @@
         }
       },
       {
+        "HashCode": 251358862,
+        "Kind": "MVC.ViewComponent",
+        "Name": "__Generated__SuggestionsSectionViewComponentTagHelper",
+        "AssemblyName": "YouTube",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "vc:suggestions-section"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "__Generated__SuggestionsSectionViewComponentTagHelper",
+          "MVC.ViewComponent.Name": "SuggestionsSection"
+        }
+      },
+      {
         "HashCode": 1800285895,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -16367,6 +16384,16 @@
     {
       "FilePath": "c:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\Views\\Shared\\Components\\SuggestionsSection\\Default.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\SuggestionsSection\\Default.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\Views\\Shared\\Components\\SuggestionsSection\\VideoCardPartial.cshtml",
+      "TargetPath": "Views\\Shared\\Components\\SuggestionsSection\\VideoCardPartial.cshtml",
       "FileKind": "mvc"
     },
     {
