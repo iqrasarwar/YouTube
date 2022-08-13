@@ -1,3 +1,65 @@
 .column-body {
-  min-width: 300px;
+  max-width: 230px;
+}
+.column-img {
+  width: 180px !important;
+  height: 90px;
+  border-radius: 0%;
+}
+.card {
+  width: auto !important;
+}
+.videoWrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "video suggestions"
+    "comments suggestions";
+  left: 0%;
+  margin: 0%;
+}
+.video_hr {
+  left: 0%;
+  margin-left: 0;
+}
+.hide_hr {
+  color: white;
+}
+.video_conatiner {
+  grid-area: video;
+}
+.comments_Container {
+  grid-area: comments;
+}
+.suggestions_container {
+  grid-area: suggestions;
+}
+.overlayConatiner {
+  width: 0%;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.sidebarPartial {
+  background-color: white;
+}
+.video_container {
+  padding: 0% 5%;
+}
+.video_iframe {
+  width: 100%;
+  height: 100%;
+}
+.video {
+  height: 500px;
 }

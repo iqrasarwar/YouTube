@@ -6,9 +6,9 @@ namespace YouTube.ViewComponents
       public IViewComponentResult Invoke(string SectionString)
       {
 
-         if (SectionString == "first section")
+         if (SectionString == "partial")
          {
-            return View("NavBarPartial", "rendered by view component");
+            return View("Partial");
          }
          else
          {

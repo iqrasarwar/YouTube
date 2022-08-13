@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "0NWYpa7ylQntEtDuY5KV8VIM7RiP0kY/E0elIrcWtHH2pT24mdndlqACXDinjoFNOYxojJpOrs0fskxP3ANqWA==",
+  "dgSpecHash": "LE2D0XIxx1rvl8Qy3BCXs3HP8WdWEP0Zq1Fyr6I7tIvoiGkLdFpbLqgQP7/T984vIOr5i8NrlPhFyjRqOgalAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\YouTube.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\google.apis\\1.57.0\\google.apis.1.57.0.nupkg.sha512",
+    "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\google.apis.auth\\1.57.0\\google.apis.auth.1.57.0.nupkg.sha512",
+    "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\google.apis.core\\1.57.0\\google.apis.core.1.57.0.nupkg.sha512",
+    "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\google.apis.youtube.v3\\1.57.0.2756\\google.apis.youtube.v3.1.57.0.2756.nupkg.sha512",
     "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\BUTT SYSTEMS\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",

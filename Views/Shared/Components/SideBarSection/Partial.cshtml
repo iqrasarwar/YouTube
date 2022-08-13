@@ -1,0 +1,21 @@
+<div class="navBarWrapper">
+   <div class="Logos">
+      <img src="~/css/images/Hamburger-Menü.png" alt="MenuIcon" class="MenuIcon" />
+      <img src="~/css/images/Logo.png" alt="youtubeLogo" class="Logo" />
+   </div>
+   <div class="overlayConatiner">
+      <div class="sidebar sidebarPartial collapsed_bar">
+         @Html.Partial("Components/SideBarSection/Actions")
+         <hr class="sidebar_hr" />
+         @Html.Partial("PartialViews/Footer")
+      </div>
+   </div>
+</div>
+<script>
+   $('.MenuIcon').click(function (e) {
+      $('.sidebarPartial').toggleClass('collapsed_bar');
+   });
+   $('.MenuIcon').click(function (e) {
+      $('.overlayConatiner').toggleClass('overlay');
+   });
+</script>

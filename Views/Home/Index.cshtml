@@ -1,11 +1,11 @@
 ﻿@section link
 {
-    <link rel="stylesheet" href="~/css/HomeStyles/Responsive.css"/>
-    <link rel="stylesheet" href="~/css/HomeStyles/Home.css"/>
+<link rel="stylesheet" href="~/css/HomeStyles/Responsive.css" />
+<link rel="stylesheet" href="~/css/HomeStyles/Home.css" />
 }
 
 <div class="nav_bar">
-    <vc:side-bar-section section-string="first section 2"></vc:side-bar-section>
+    <vc:side-bar-section section-string="full"></vc:side-bar-section>
     <div class="nav_bar_fixed">
         @Html.Partial("Components/SideBarSection/TopBarPartial")
         <hr class="positionBody hr" />
@@ -17,10 +17,9 @@
 
 @section Scripts
 {
-    <script>
-        $('.MenuIcon').click(function(e)
-        {
-            $('.nav_bar').toggleClass('collapsed_expand');
-        });
-    </script>
+<script>
+    $('.MenuIcon').click(function (e) {
+        $('.nav_bar').toggleClass('collapsed_expand');
+    });
+</script>
 }
