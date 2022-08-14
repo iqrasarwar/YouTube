@@ -1,79 +1,106 @@
 <div class="video">
-      <iframe class="video_iframe" src="https://www.youtube.com/embed/izYLLL1I1c0">
-      </iframe>
+	<iframe class="video_iframe" src="https://www.youtube.com/embed/izYLLL1I1c0">
+	</iframe>
 </div>
 <div class="video_Meta">
-      <div class="video_Tags">
-            #karma #smile #character
-      </div>
-      <div class="video_Title">
-            Karma Says|| English motivational video || Buddha quotes status |
-      </div>
-      <div class="video_Details">
-            <div class="video_Description">
-                  <span class="views">99,254 views</span>
-                  <span class="date">Apr 25, 2021</span>
-                  <span class="description">
-                        Buddha quotes on wisdom
-                        Buddha quotes on life
-                        Gautam buddha whattsap status
-                        English inspirational quotes
-                        Status
-                        This is a motivational video for everyone who is looking for a positive attitude and a positive
-                        attitude is the key to success.
-                  </span>
-            </div>
-            <div class="video_Actions">
-                  <span class="likes">
-                        <i class="fas fa-thumbs-up"></i>
-                        <span class="likes_count">99,254</span>
-                  </span>
-                  <span class="dislikes">
-                        <i class="fas fa-thumbs-down"></i>
-                        <span class="dislikes_count">Dislike</span>
-                  </span>
-                  <span class="share">
-                        <i class="fas fa-share-alt"></i>
-                        <span class="share_count">share</span>
-                  </span>
-                  <span class="save">
-                        <i class="fas fa-save"></i>
-                        <span class="save_count">save</span>
-                  </span>
-            </div>
-            <div class="video_Channel">
-                  <div class="channel_Profile">
-                        <img src="~/Images/profile.jpg" alt="">
-                  </div>
-                  <div class="channel_Details">
-                        <div class="channel_Name">
-                              <span class="channel_Name_Text">
-                                    Gautam Buddha
-                              </span>
-                              <span class="channel_Verified">
-                                    <i class="fas fa-check-circle"></i>
-                              </span>
-                        </div>
-                        <div class="channel_Subscribers">
-                              <span class="channel_Subscribers_Text">
-                                    1.2M subscribers
-                              </span>
-                        </div>
-                  </div>
-                  <button class="channel_Subscribe">
-                        Subscribe
-                  </button>
-            </div>
-            <div class="video_Comments_Snap">
-                  <div class="comments_detail">
-                        <p>Comments</p>
-                        <p class="comments_count">99,254</p>
-                  </div>
-                  <hr>
-                  <div class="comment_snap">
-                        <img class="comment_snap_Profile" src="~/Images/profile.jpg" alt="">
-                        <p>this is sample comment.</p>
-                  </div>
-            </div>
-      </div>
+	@* <div class="video_Tags">
+		#karma #smile #character
+		</div> *@
+	<div class="video_Title">
+		Karma Says|| English motivational video || Buddha quotes status |
+	</div>
+	<div class="video_Details">
+		<div class="video_Description">
+			<div class="video_stats">
+				<span class="views">99,254 views</span>
+				<span class="dot"> . </span>
+				<span class="date">Apr 25, 2021</span>
+			</div>
+			<div class="video_Actions">
+				<span class="likes">
+					<img src="~/css/images/like.png" alt="like">
+					<span class="count">99,254</span>
+				</span>
+				<span class="dislikes">
+					<img src="~/css/images/dislike.png" alt="dislike">
+					<span class="count">DISLIKE</span>
+				</span>
+				<span class="share">
+					<img src="~/css/images/share.png" alt="share">
+					<span class="count">SHARE</span>
+				</span>
+				<span class="save">
+					<img src="~/css/images/save.png" alt="save">
+					<span class="count">SAVE</span>
+				</span>
+			</div>
+
+		</div>
+		<hr class="video_hr">
+		<div class="video_Channel">
+			<img src="~/css/images/profile.jpg" alt="" class="profile_img">
+			<div class="video_Meta_details">
+				<div class="channel_Profile">
+					<div class="channel_details">
+						<div class="channel_Name_Text">
+							Gautam Buddha
+							<i class="fa fa-check-circle" aria-hidden="true"></i>
+						</div>
+						<div class="channel_Subscribers">
+							1.2M subscribers
+						</div>
+					</div>
+					<button class="subscribe_btn">
+						Subscribe
+					</button>
+				</div>
+				<div class="video_content_description">
+					Buddha quotes on wisdom
+					Buddha quotes on life
+					Gautam buddha whattsap status
+					English inspirational quotes
+					Status
+					This is a motivational video for everyone who is looking for a positive attitude and a positive
+					attitude is the key to success. This necessity was
+					as personal to me as it was universal.
+					This need combined with my passion for
+					teaching resulted in
+					<span id="points">...</span>
+					<span id="moreText" class="moreText">
+						GeeksforGeeks as
+						we know today. My message to you, in
+						our inaugural edition of Geeks Digest,
+						would be that if you are looking for
+						a problem to work on, you don’t need
+						to look very far for it. All you should
+						do is to look around yourself.
+					</span>
+					<p onclick="toggleText()" id="textButton" class="textToggle">SHOW MORE</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+	</div>
 </div>
+<script>
+	function toggleText() {
+		var points =
+			document.getElementById("points");
+
+		var showMoreText =
+			document.getElementById("moreText");
+
+		var buttonText =
+			document.getElementById("textButton");
+		if (points.style.display === "none") {
+			showMoreText.style.display = "none";
+			points.style.display = "inline";
+			buttonText.innerHTML = "SHOW MORE";
+		}
+		else {
+			showMoreText.style.display = "inline";
+			points.style.display = "none";
+			buttonText.innerHTML = "SHOW LESS";
+		}
+	}
+</script>

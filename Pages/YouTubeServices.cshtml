@@ -1,0 +1,20 @@
+@page
+@model YouTube.Pages.YouTubeServices
+@{
+
+}
+<h1 class="display-4">YouTube Videos</h1>
+<div class="row">
+   @foreach (var video in Model.Videos)
+   {
+
+      <div class="col">
+         <figure class="figure">
+            <a href="https://www.youtube.com/watch?v=@video.VideoId" title="@video.Title">
+               <img src="@video.Thumbnail" class="figure-img img-fluid rounded" alt="@video.Title">
+            </a>
+            <figcaption class="figure-caption">@video.Title</figcaption>
+         </figure>
+      </div>
+   }
+</div>

@@ -1,4 +1,6 @@
 using YouTube.Models;
+using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +19,14 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkSto
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddRazorPages();
+
+builder.Services.AddSingleton(new YouTubeService(new BaseClientService.Initializer()
+{
+   ApiKey = "AIzaSyBd9CcBA18DsoJZfO75tlMHOp2lxdSAdsY",
+   ApplicationName = "YouTubeClone"
+}));
 
 var app = builder.Build();
 
@@ -37,6 +47,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}",
+    app.MapRazorPages());
 
 app.Run();
