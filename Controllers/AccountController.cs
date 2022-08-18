@@ -1,19 +1,25 @@
 using YouTube.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using YouTube.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace YouTube.Controllers
 {
    public class AccountController : Controller
    {
+      private readonly IUser _user;
+      private readonly IChannel _channel;
       private readonly UserManager<IdentityUser> userManager;
       private readonly SignInManager<IdentityUser> signInManager;
 
-      public AccountController(UserManager<IdentityUser> uManager, SignInManager<IdentityUser> sManager)
+      public AccountController(UserManager<IdentityUser> uManager, SignInManager<IdentityUser> sManager, IUser user, IChannel channel)
       {
          userManager = uManager;
          signInManager = sManager;
+         _user = user;
+         _channel = channel;
       }
+
       public IActionResult Index()
       {
          return View();
@@ -43,6 +49,16 @@ namespace YouTube.Controllers
             {
                if (signInManager.IsSignedIn(User))
                {
+                  //register user at the time of account registeration
+                  _user.AddUser(new Models.User { createdBy = model.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Email = model.Email, Username = model.Username, channelId = null });
+                  HttpContext.Response.Cookies.Append("login", "false");
+                  if (!HttpContext.Request.Cookies.ContainsKey("email"))
+                     HttpContext.Response.Cookies.Append("email", model.Email);
+                  else
+                  {
+                     HttpContext.Response.Cookies.Delete("email");
+                     HttpContext.Response.Cookies.Append("email", model.Email);
+                  }
                   return RedirectToAction("index", "home");
                }
                return RedirectToAction("login", "account");
@@ -76,6 +92,8 @@ namespace YouTube.Controllers
                                           model.Password, false, false);
             if (result.Succeeded)
             {
+               //store email of logged in user in cookies
+               HttpContext.Response.Cookies.Append("login", "true");
                return RedirectToAction("index", "home");
             }
             invalid = 1;
@@ -90,6 +108,7 @@ namespace YouTube.Controllers
       [HttpGet]
       public async Task<IActionResult> Logout()
       {
+         HttpContext.Response.Cookies.Append("login", "false");
          await signInManager.SignOutAsync();
          return RedirectToAction("index", "home");
       }

@@ -1,1 +1,87 @@
-<p>Upload view</p>
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery AntiForgery;
+@{
+   Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+@section link
+{
+<link rel="stylesheet" href="~/css/ChannelUpload.css" />
+}
+<div class=" positionBody videoBody formConatiner uploadDetailsConatiner">
+   <h2>Details</h2>
+   <div id="detailsForm" class="form-group">
+      <div>
+         <label for="title">Title</label>
+         <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+      </div>
+      <div>
+         <label for="desc">Description</label>
+         <textarea type="text" class="form-control" id="desc" name="desc" placeholder="Description"></textarea>
+      </div>
+      <div>
+         <label for="catag">Catagory</label>
+         <select name="catag" id="catag" class="form-control">
+            <option value="Default" disabled selected>Select Category</option>
+            <option value="Sports">Sports</option>
+            <option value="Music">Music</option>
+            <option value="Gaming">Gaming</option>
+            <option value="News">News</option>
+         </select>
+      </div>
+      <div>
+         <label for="thumbnail">Thumbnail</label>
+         <input type="file" class="form-control" id="thumbnail" name="thumbnail" placeholder="Thumbnail"
+            accept="image/*">
+      </div>
+      <div class="btn-div">
+         <button id="submitDeatils" class="btn btn-primary">Upload details</button>
+      </div>
+   </div>
+</div>
+@section Scripts
+{
+<script type="text/javascript">
+   $("#submitDeatils").on('click', function () {
+      var files = $('#thumbnail').prop("files");
+      var formFiles = new FormData();
+      if (files.length > 0) {
+         formFiles.append("thumbnail", files[0]);
+      }
+      $.ajax({
+         type: 'POST',
+         url: "/Channel/Upload",
+         data: formFiles,
+         cache: false,
+         contentType: false,
+         processData: false,
+         success: function (repo) {
+            if (repo.status == "success") {
+               alert(files.length);
+            }
+         },
+         error: function (xhr) {
+            alert("error in thumbnail!")
+         }
+      });
+      var data = {
+         Title: $("#title").val(),
+         Description: $("#desc").val(),
+         Catagory: $("#catag").val(),
+      }
+      $.ajax({
+         type: 'POST',
+         url: '/Channel/UploadData',
+         contentType: 'application/json; charset=utf-8',
+         data: JSON.stringify(data),
+         success: function (result) {
+            alert('Successfully received Data ');
+            console.log(result);
+         },
+         error: function () {
+            alert('Failed to receive the Data');
+            console.log('Failed ');
+         }
+      });
+   });
+</script>
+}

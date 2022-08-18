@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qL1fuIxvhnleKvp4DRyaZBsnqowlH4acoMZdsl4OCXU=",
+  "Hash": "hb32SgEIXabp7Q6WQaG6FqE21WiB1Vw4UZ6JBWgLTKE=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\ChannelStyles.css"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\ChannelUpload.css",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/ChannelUpload.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ChannelUpload.css"
     },
     {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\Explore.css",
@@ -1921,12 +1938,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\localhost_3000_.png",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\1.PNG",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedVideos/localhost_3000_.png",
+      "RelativePath": "uploadedthumbnails/1.PNG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1935,7 +1952,58 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedVideos\\localhost_3000_.png"
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\1.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\2.png",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedthumbnails/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\2.png"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\cn.PNG",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedthumbnails/cn.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\cn.PNG"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\React App - Google Chrome 2022-08-30 20-34-58.mp4",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedVideos/React App - Google Chrome 2022-08-30 20-34-58.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\React App - Google Chrome 2022-08-30 20-34-58.mp4"
     }
   ]
 }

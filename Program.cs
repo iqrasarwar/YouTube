@@ -32,6 +32,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<Ivideo, IvideoRepositry>();
+builder.Services.AddScoped<IUser, IUserRepositry>();
+builder.Services.AddScoped<IChannel, IChannelRepositry>();
 
 var app = builder.Build();
 

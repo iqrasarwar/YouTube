@@ -3,6 +3,7 @@ namespace YouTube.Models
    public class video : AduitInfo
    {
       [Key]
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
       public int Id { get; set; }
       public string? Title { get; set; }
       public string? Description { get; set; }
@@ -14,7 +15,7 @@ namespace YouTube.Models
       public int Likes { get; set; }
       [ForeignKey("Channel")]
       public int channelId { get; set; }
-      public Channel channel { get; set; }
+      public virtual Channel channel { get; set; }
       public video()
       { }
    }

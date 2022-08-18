@@ -1,6 +1,4 @@
 
-using System.ComponentModel.DataAnnotations;
-
 namespace YouTube.ViewModels
 {
    public class RegisterViewModel

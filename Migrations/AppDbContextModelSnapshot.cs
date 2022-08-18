@@ -16,7 +16,7 @@ namespace YouTube.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.7")
+                .HasAnnotation("ProductVersion", "6.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -246,24 +246,24 @@ namespace YouTube.Migrations
                     b.Property<int>("ViewsCount")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("createdAt")
+                    b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("createdBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("modifiedAt")
+                    b.Property<DateTime?>("modifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("modifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("userId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("userId");
 
                     b.ToTable("channel");
                 });
@@ -283,21 +283,19 @@ namespace YouTube.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("createdAt")
+                    b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("createdBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("likesCount")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("modifiedAt")
+                    b.Property<DateTime?>("modifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("modifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("userID")
@@ -328,7 +326,6 @@ namespace YouTube.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfileImg")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
@@ -336,27 +333,24 @@ namespace YouTube.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int>("channelId")
+                    b.Property<int?>("channelId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("createdAt")
+                    b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("createdBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("modifiedAt")
+                    b.Property<DateTime?>("modifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("modifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("channelId")
-                        .IsUnique();
+                    b.HasIndex("channelId");
 
                     b.ToTable("user");
                 });
@@ -398,18 +392,16 @@ namespace YouTube.Migrations
                     b.Property<int>("channelId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("createdAt")
+                    b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("createdBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("modifiedAt")
+                    b.Property<DateTime?>("modifiedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("modifiedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -470,6 +462,17 @@ namespace YouTube.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("YouTube.Models.Channel", b =>
+                {
+                    b.HasOne("YouTube.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("userId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("YouTube.Models.Comment", b =>
                 {
                     b.HasOne("YouTube.Models.User", "User")
@@ -492,10 +495,8 @@ namespace YouTube.Migrations
             modelBuilder.Entity("YouTube.Models.User", b =>
                 {
                     b.HasOne("YouTube.Models.Channel", "Channel")
-                        .WithOne("User")
-                        .HasForeignKey("YouTube.Models.User", "channelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("channelId");
 
                     b.Navigation("Channel");
                 });
@@ -513,9 +514,6 @@ namespace YouTube.Migrations
 
             modelBuilder.Entity("YouTube.Models.Channel", b =>
                 {
-                    b.Navigation("User")
-                        .IsRequired();
-
                     b.Navigation("videos");
                 });
 

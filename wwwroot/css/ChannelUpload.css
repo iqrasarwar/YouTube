@@ -1,0 +1,29 @@
+.uploadDetailsConatiner
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  max-width: 80% !important;
+  margin: 0 auto;
+}
+.uploadDetailsConatiner input,.form-group{
+   width: 100%;
+}
+.form-group label{
+   min-width: 100px;
+}
+.form-group div
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   gap: 20px;
+   margin-block: 20px;
+}
+.btn-div
+{
+   display: flex;
+   justify-content: center !important;
+}
