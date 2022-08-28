@@ -82,25 +82,3 @@
 		<hr>
 	</div>
 </div>
-<script>
-	function toggleText() {
-		var points =
-			document.getElementById("points");
-
-		var showMoreText =
-			document.getElementById("moreText");
-
-		var buttonText =
-			document.getElementById("textButton");
-		if (points.style.display === "none") {
-			showMoreText.style.display = "none";
-			points.style.display = "inline";
-			buttonText.innerHTML = "SHOW MORE";
-		}
-		else {
-			showMoreText.style.display = "inline";
-			points.style.display = "none";
-			buttonText.innerHTML = "SHOW LESS";
-		}
-	}
-</script>

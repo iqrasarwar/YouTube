@@ -7,17 +7,19 @@
 <div class="nav_bar">
     <vc:side-bar-section section-string="full"></vc:side-bar-section>
     <div class="nav_bar_fixed">
-        @Html.Partial("Components/SideBarSection/TopBarPartial")
+        <partial name="Components/SideBarSection/TopBarPartial" />
         <hr class="positionBody hr" />
     </div>
     <div class="positionBody videoBody">
-        @Html.Partial("PartialViews/Videos")
+        <partial name="PartialViews/Videos" />
     </div>
 </div>
 
 @section Scripts
 {
 <script>
+
+    //SIDE BAR SECTION SCRIPTS
     $('.MenuIcon').click(function (e) {
         $('.nav_bar').toggleClass('collapsed_expand');
     });

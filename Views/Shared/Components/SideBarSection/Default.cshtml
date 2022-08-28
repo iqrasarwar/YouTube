@@ -1,22 +1,11 @@
 ﻿<div class="navBarWrapper">
     <div class="Logos">
-        <img
-            src="~/css/images/Hamburger-Menü.png"
-            alt="MenuIcon"
-            class="MenuIcon"
-        />
-        <img src="~/css/images/Logo.png" alt="youtubeLogo"  class="Logo"/>
+        <img src="~/css/images/Hamburger-Menü.png" alt="MenuIcon" class="MenuIcon" />
+        <img src="~/css/images/Logo.png" alt="youtubeLogo" class="Logo" />
     </div>
     <div class="sidebar">
-        @Html.Partial("Components/SideBarSection/Actions")
+        <partial name="Components/SideBarSection/Actions" />
         <hr class="sidebar_hr" />
-        @Html.Partial("PartialViews/Footer")
+        <partial name="PartialViews/Footer" />
     </div>
 </div>
-
-<script>
-$('.MenuIcon').click(function(e)
-{
-    $('.sidebar').toggleClass('collapsed_bar');
-});
-</script>

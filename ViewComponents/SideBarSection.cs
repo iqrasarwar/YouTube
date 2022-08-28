@@ -5,7 +5,6 @@ namespace YouTube.ViewComponents
    {
       public IViewComponentResult Invoke(string SectionString)
       {
-
          if (SectionString == "partial")
          {
             return View("Partial");

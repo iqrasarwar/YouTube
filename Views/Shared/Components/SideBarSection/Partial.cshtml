@@ -5,17 +5,9 @@
    </div>
    <div class="overlayConatiner">
       <div class="sidebar sidebarPartial collapsed_bar">
-         @Html.Partial("Components/SideBarSection/Actions")
+         <partial name="Components/SideBarSection/Actions" />
          <hr class="sidebar_hr" />
-         @Html.Partial("PartialViews/Footer")
+         <partial name="PartialViews/Footer" />
       </div>
    </div>
 </div>
-<script>
-   $('.MenuIcon').click(function (e) {
-      $('.sidebarPartial').toggleClass('collapsed_bar');
-   });
-   $('.MenuIcon').click(function (e) {
-      $('.overlayConatiner').toggleClass('overlay');
-   });
-</script>

@@ -15,8 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\BUTT SYSTEMS\OneDrive\Desktop\FlowerStudio\YotubeClone\YouTube
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Pages/YouTubeServices.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWW91VHViZVNlcnZpY2VzLmNzaHRtbA==
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Pages/Channel/Channel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbm5lbFxDaGFubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Pages/YouTubeServices/YouTubeServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWW91VHViZVNlcnZpY2VzXFlvdVR1YmVTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Account/Login.cshtml]
@@ -29,6 +33,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/commentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcY29tbWVudHNTZWN0aW9uXGNvbW1lbnRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcY29tbWVudHNTZWN0aW9uXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/FileUploadSection/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmlsZVVwbG9hZFNlY3Rpb25cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Actions.cshtml]
@@ -77,6 +93,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Videos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xWaWRlb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_LayoutPages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_ValidationScriptsPartial.cshtml]

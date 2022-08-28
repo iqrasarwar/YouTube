@@ -8,13 +8,14 @@
 <div class="nav_bar">
     <vc:side-bar-section section-string="partial"></vc:side-bar-section>
     <div class="nav_bar_fixed">
-        @Html.Partial("Components/SideBarSection/TopBarPartial")
+        <partial name="Components/SideBarSection/TopBarPartial" />
     </div>
     <div class="positionBody videoBody videoWrapper">
         <div class="video_container">
             <vc:video-section></vc:video-section>
         </div>
         <div class="comments_Container">
+            <vc:comments-section></vc:comments-section>
         </div>
         <div class="suggestions_container">
             <vc:suggestions-section></vc:suggestions-section>
@@ -25,11 +26,48 @@
 @section Scripts
 {
 <script>
+
+    //SIDEBAR SECTION SCRIPTS
+
+    //to collapse the sidebar when the user clicks on the toggle
+    $('.MenuIcon').click(function (e) {
+        $('.sidebarPartial').toggleClass('collapsed_bar');
+    });
+    //to place the overlay on the screen when the user clicks on the toggle
+    $('.MenuIcon').click(function (e) {
+        $('.overlayConatiner').toggleClass('overlay');
+    });
+
+    //VIDEO COMPONENT SCRIPTS
+
     $('.MenuIcon').click(function (e) {
         $('.nav_bar').toggleClass('collapsed_expand');
     });
     $('.MenuIcon').click(function (e) {
         $('.hr').toggleClass('hide_hr');
     });
+
+    //VIDEO SECTION -> VIEW COMPONENT SCRIPT
+
+    function toggleText() {
+        var points =
+            document.getElementById("points");
+
+        var showMoreText =
+            document.getElementById("moreText");
+
+        var buttonText =
+            document.getElementById("textButton");
+        if (points.style.display === "none") {
+            showMoreText.style.display = "none";
+            points.style.display = "inline";
+            buttonText.innerHTML = "SHOW MORE";
+        }
+        else {
+            showMoreText.style.display = "inline";
+            points.style.display = "none";
+            buttonText.innerHTML = "SHOW LESS";
+        }
+    }
 </script>
 }

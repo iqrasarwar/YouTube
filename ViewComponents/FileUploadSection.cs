@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-
 namespace YouTube.ViewComponents
 {
-
-   public class VideoSection : ViewComponent
+   public class FileUploadSection : ViewComponent
    {
       public IViewComponentResult Invoke()
       {

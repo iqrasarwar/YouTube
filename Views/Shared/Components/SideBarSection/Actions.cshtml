@@ -1,19 +1,20 @@
 ﻿@{
 
-    string[] Home = { "Home" ,"/css/images/Home.png"};
-    string[] Explore = { "Explore" ,"/css/images/Explore.png"};
-    string[] Shorts = { "Shorts" ,"/css/images/Home.png"};
-    string[] Subscriptions = { "Subscriptions" ,"/css/images/Subscriptions.png"};
-    string[] Settings = { "Settings" ,"/css/images/Settings.png"};
-    string[] History = { "History" ,"/css/images/History.png"};
-    string[] Help = { "Help" ,"/css/images/Help.png"};
-    string[] Feedback = { "Send feedback" ,"/css/images/Feedback.png"};
+    string[] Home = { "Home", "/css/images/Home.png" };
+    string[] Explore = { "Explore", "/css/images/Explore.png" };
+    string[] Shorts = { "Shorts", "/css/images/Home.png" };
+    string[] Subscriptions = { "Subscriptions", "/css/images/Subscriptions.png" };
+    string[] Settings = { "Settings", "/css/images/Settings.png" };
+    string[] History = { "History", "/css/images/History.png" };
+    string[] Help = { "Help", "/css/images/Help.png" };
+    string[] Feedback = { "Send feedback", "/css/images/Feedback.png" };
 }
-@Html.Partial("PartialViews/Action",Home)
-@Html.Partial("PartialViews/Action",Explore)
-@Html.Partial("PartialViews/Action",Subscriptions)
-<hr  class = "sidebar_hr"/>
-@Html.Partial("PartialViews/Action",Settings)
-@Html.Partial("PartialViews/Action",History)
-@Html.Partial("PartialViews/Action",Help)
-@Html.Partial("PartialViews/Action",Feedback)
+<partial name="PartialViews/Action" model="Home" />
+<partial name="PartialViews/Action" model="Explore" />
+<partial name="PartialViews/Action" model="Shorts" />
+<partial name="PartialViews/Action" model="Subscriptions" />
+<hr class="sidebar_hr" />
+<partial name="PartialViews/Action" model="Settings" />
+<partial name="PartialViews/Action" model="History" />
+<partial name="PartialViews/Action" model="Help" />
+<partial name="PartialViews/Action" model="Feedback" />

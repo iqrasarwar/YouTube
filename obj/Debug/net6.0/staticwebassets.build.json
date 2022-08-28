@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5/gqQG2sw86GshPaBnfGxUaLl6+qliuSaL9EL5oAARw=",
+  "Hash": "GSO4GMrgfqTxr+51g4db0KvxSFua/8Ac8MYwBDZt+gg=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\AccountStyles.css"
     },
     {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\ChannelStyles.css",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/ChannelStyles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ChannelStyles.css"
+    },
+    {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\HomeStyles\\Home.css",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
@@ -117,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\images\\BrowseChannels.png"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\channel_illustration.svg",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/images/channel_illustration.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\channel_illustration.svg"
     },
     {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\Chocolate.png",
@@ -612,6 +646,23 @@
       "OriginalItemSpec": "wwwroot\\css\\images\\Song.png"
     },
     {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\speed_line.svg",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/images/speed_line.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\speed_line.svg"
+    },
+    {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\Subscriptions.png",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
@@ -661,6 +712,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\images\\Trends.png"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\upload.png",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/images/upload.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\upload.png"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\uploadBlock.png",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "css/images/uploadBlock.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\uploadBlock.png"
     },
     {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\css\\images\\Vector.png",

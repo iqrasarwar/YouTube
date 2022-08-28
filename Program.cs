@@ -3,6 +3,8 @@ using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using YouTube.Models.Repositries;
+using YouTube.Models.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,12 +18,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
            options.UseSqlServer(connString, sql => sql.MigrationsAssembly(migrationAssembly)));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+//To Prevent against Cross-site Request Forgery attacks,
+// builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
-
+builder.Services.AddSingleton<Ivideo, IvideoRepositry>();
 builder.Services.AddSingleton(new YouTubeService(new BaseClientService.Initializer()
 {
    ApiKey = "AIzaSyBd9CcBA18DsoJZfO75tlMHOp2lxdSAdsY",

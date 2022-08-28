@@ -1,0 +1,5 @@
+PartialViews
+ViewComponents
+Sections
+Razor Pages
+AJAX
