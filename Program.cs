@@ -17,6 +17,11 @@ var migrationAssembly = typeof(Program).Assembly.GetName().Name;
 builder.Services.AddDbContext<AppDbContext>(options =>
            options.UseSqlServer(connString, sql => sql.MigrationsAssembly(migrationAssembly)));
 
+builder.Services.AddSingleton(new YouTubeService(new BaseClientService.Initializer()
+{
+   ApiKey = "AIzaSyBd9CcBA18DsoJZfO75tlMHOp2lxdSAdsY",
+   ApplicationName = "YouTubeClone"
+}));
 builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 //To Prevent against Cross-site Request Forgery attacks,
 // builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
@@ -25,12 +30,9 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkSto
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<Ivideo, IvideoRepositry>();
-builder.Services.AddSingleton(new YouTubeService(new BaseClientService.Initializer()
-{
-   ApiKey = "AIzaSyBd9CcBA18DsoJZfO75tlMHOp2lxdSAdsY",
-   ApplicationName = "YouTubeClone"
-}));
+builder.Services.AddScoped<Ivideo<video>, IvideoRepositry<video>>();
+// builder.Services.AddSingleton<IExplore, IExploreReposity>();
+builder.Services.AddScoped<IExplore<video>, IExploreReposity<video>>();
 
 var app = builder.Build();
 

@@ -1,0 +1,73 @@
+@section link
+{
+<link rel="stylesheet" href="~/css/HomeStyles/Responsive.css" />
+<link rel="stylesheet" href="~/css/HomeStyles/Home.css" />
+<link rel="stylesheet" href="~/css/Explore.css" />
+}
+
+<div class="nav_bar">
+   <vc:side-bar-section section-string="full"></vc:side-bar-section>
+   <div class="nav_bar_fixed">
+      <partial name="Components/SideBarSection/TopBarPartial" />
+      <hr class="positionBody hr" />
+   </div>
+   <div class="positionBody videoBody">
+      <div class="ExploreSections">
+         <div class="ExploreSection" id="TrendingSection">
+            <img
+               src="https://img.icons8.com/external-anggara-flat-anggara-putra/32/000000/external-trending-ui-basic-anggara-flat-anggara-putra-2.png" />
+            <h6>Trending</h6>
+         </div>
+         <div class="ExploreSection" id="MusicSection">
+            <img src="~/css/images/music.png" />
+            <h6>Music</h6>
+         </div>
+         <div class="ExploreSection" id="GamingSection">
+            <img src="~/css/images/gaming.png" />
+            <h6>Gaming</h6>
+         </div>
+         <div class="ExploreSection" id="NewsSection">
+            <img src="~/css/images/news.png" />
+            <h6>News</h6>
+         </div>
+         <div class="ExploreSection" id="SportsSection">
+            <img src="~/css/images/sports.png" />
+            <h6>Sports</h6>
+         </div>
+      </div>
+      <div class="SectionContent"></div>
+   </div>
+</div>
+
+@section Scripts
+{
+<script>
+   $(document).ready(function () {
+      $.get("/Explore/Trending", function (data, status) {
+         console.log(data);
+         $(".SectionContent").html(data);
+      });
+   });
+   $("#TrendingSection").on('click', function () {
+      $.get("/Explore/Trending", function (data, status) {
+         console.log(data);
+         $(".SectionContent").html(data);
+      });
+   });
+   $("#MusicSection").on('click', function () {
+      $.get("/Explore/Music", function (data, status) {
+         $(".SectionContent").html(data);
+      });
+   });
+   $("#GamingSection").on('click', function () {
+      $.get("/Explore/Gaming", function (data, status) {
+         console.log(data);
+         $(".SectionContent").html(data);
+      });
+   });
+   //SIDE BAR SECTION SCRIPTS
+   $('.MenuIcon').click(function (e) {
+      $('.nav_bar').toggleClass('collapsed_expand');
+   });
+</script>
+}

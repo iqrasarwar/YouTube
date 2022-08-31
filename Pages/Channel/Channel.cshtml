@@ -125,6 +125,7 @@
             if (repo.status == "success") {
                document.getElementsByClassName("errMsg")[0].innerHTML = "";
                alert(files[0].name + " uploaded successfully");
+               closeUploader();
             }
          },
          error: function (xhr) {
@@ -134,6 +135,9 @@
    });
    function showUploader() {
       $('#myModal').modal('show');
+   }
+   function closeUploader() {
+      $('#myModal').modal('hide');
    }
    let commonContent = "<img src='/css/images/channel_illustration.svg' class='img'/><p class='uploadHead'>Upload a video to get started</p><p class='uploadSubHead'>Start sharing your story and connecting with viewers. Videos you upload will show up here.</p> <button>UPLOAD VIDEO</button><p class='learnMore' >Learn more about <a href=''>how to get started</a></p>";
    $(document).ready(function () {

@@ -1,58 +1,42 @@
 using YouTube.Models.Interfaces;
-using YouTube.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace YouTube.Models.Repositries
 {
-   public class IvideoRepositry : Ivideo
+   public class IvideoRepositry<video> : Ivideo<video> where video : class
    {
-      // private static readonly SqlConnection Con = new(@"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=YouTubeClone;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-      //   public static bool RegisterNewUser(SignUp s)
-      //   {
-      //       Con.Open();
-      //       SqlCommand Cmd = new("Insert into [UserBase] (Name,UserName, Password, Email) Values(@name,@username,@password,@email)",Con);
-      //       Cmd.Parameters.Add(new("name", s.Name));
-      //       Cmd.Parameters.Add(new("username", s.UserName));
-      //       Cmd.Parameters.Add(new("password", s.Password));
-      //       Cmd.Parameters.Add(new("email", s.Email));
-      //       int status = Cmd.ExecuteNonQuery();
-      //       Con.Close();
-      //       return status != 0;
-      //   }
-      //   public static List<SignUp> GetUsers()
-      //   {
-      //       Con.Open();
-      //       SqlCommand Cmd = new("select * from [UserBase]", Con);
-      //       SqlDataReader dr = Cmd.ExecuteReader();
-      //       List<SignUp> list = new();
-      //       if(dr.HasRows)
-      //       {
-      //           while (dr.Read())
-      //           {
-      //               list.Add(new SignUp((String)dr[1], (String)dr[2], (String)dr[3], (String)dr[3], (String)dr[4])); //nme, usernme, pssword, emil
-      //           }
-      //       }
-      //       Con.Close();
-      //       return list;
-      //   }
-      public List<video> GetAllVideos()
+      private readonly AppDbContext _appDbContext;
+      private DbSet<video> _videos;
+      public IvideoRepositry(AppDbContext appDbContext)
       {
-         return null;
+         _appDbContext = appDbContext;
+         _videos = _appDbContext.Set<video>();
       }
       public video GetVideoById(int id)
       {
          return null;
+         // return _videos.Find(id);
       }
       public void AddVideo(video video)
       {
-
+         _videos.Add(video);
+         _appDbContext.SaveChanges();
       }
       public void UpdateVideo(video video)
       {
-
+         _videos.Update(video);
+         _appDbContext.SaveChanges();
       }
       public void DeleteVideo(int id)
       {
-
+         var video = _videos.Find(id);
+         _videos.Remove(video);
+         _appDbContext.SaveChanges();
       }
+      public IEnumerable<video> GetAllVideos()
+      {
+         return _videos.ToList();
+      }
+
    }
 }
