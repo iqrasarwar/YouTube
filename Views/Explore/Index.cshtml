@@ -44,14 +44,14 @@
 <script>
    $(document).ready(function () {
       $.get("/Explore/Trending", function (data, status) {
-         console.log(data);
-         $(".SectionContent").html(data);
+         @* console.log(data); *@
+            $(".SectionContent").html(data);
       });
    });
    $("#TrendingSection").on('click', function () {
       $.get("/Explore/Trending", function (data, status) {
-         console.log(data);
-         $(".SectionContent").html(data);
+         @* console.log(data); *@
+            $(".SectionContent").html(data);
       });
    });
    $("#MusicSection").on('click', function () {
@@ -61,8 +61,14 @@
    });
    $("#GamingSection").on('click', function () {
       $.get("/Explore/Gaming", function (data, status) {
-         console.log(data);
-         $(".SectionContent").html(data);
+         @* console.log(data); *@
+            $(".SectionContent").html(data);
+      });
+   });
+   $("#NewsSection").on('click', function () {
+      $.get("/Explore/News", function (data, status) {
+         @* console.log(data); *@
+            $(".SectionContent").html(data);
       });
    });
    //SIDE BAR SECTION SCRIPTS

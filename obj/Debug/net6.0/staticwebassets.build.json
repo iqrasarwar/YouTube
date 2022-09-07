@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hb32SgEIXabp7Q6WQaG6FqE21WiB1Vw4UZ6JBWgLTKE=",
+  "Hash": "/pnkjWJkX0cpN8R1ibZfiVbNP/Wxa7IAc+JtDFR+e3g=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -1938,12 +1938,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\1.PNG",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.webp",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedthumbnails/1.PNG",
+      "RelativePath": "uploadedthumbnails/8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1952,15 +1952,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\1.PNG"
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.webp"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\2.png",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\Best Teacher Quotes  Top 10 Teacher Quotes.webp",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedthumbnails/2.png",
+      "RelativePath": "uploadedthumbnails/Best Teacher Quotes  Top 10 Teacher Quotes.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1969,15 +1969,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\2.png"
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\Best Teacher Quotes  Top 10 Teacher Quotes.webp"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\cn.PNG",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.mp4",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedthumbnails/cn.PNG",
+      "RelativePath": "uploadedVideos/8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1986,15 +1986,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\cn.PNG"
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\8a7c0c8b-927f-47ed-b927-58fb16c6a3b3.mp4"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\React App - Google Chrome 2022-08-30 20-34-58.mp4",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\Best Teacher Quotes  Top 10 Teacher Quotes.mp4",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedVideos/React App - Google Chrome 2022-08-30 20-34-58.mp4",
+      "RelativePath": "uploadedVideos/Best Teacher Quotes  Top 10 Teacher Quotes.mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2003,7 +2003,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedVideos\\React App - Google Chrome 2022-08-30 20-34-58.mp4"
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\Best Teacher Quotes  Top 10 Teacher Quotes.mp4"
     }
   ]
 }

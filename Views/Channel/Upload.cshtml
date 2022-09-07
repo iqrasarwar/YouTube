@@ -41,7 +41,7 @@
 @section Scripts
 {
 <script type="text/javascript">
-   $("#submitDeatils").on('click', function () {
+   $("#thumbnail").on('change', function () {
       var files = $('#thumbnail').prop("files");
       var formFiles = new FormData();
       if (files.length > 0) {
@@ -63,6 +63,9 @@
             alert("error in thumbnail!")
          }
       });
+
+   });
+   $("#submitDeatils").on('click', function () {
       var data = {
          Title: $("#title").val(),
          Description: $("#desc").val(),

@@ -1,5 +1,6 @@
 using YouTube.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using AutoMapper;
 using YouTube.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,21 +45,21 @@ namespace YouTube.Controllers
                LockoutEnabled = false,
             };
             var result = await userManager.CreateAsync(user, model.Password);
-
+            var confgi = new MapperConfiguration(cfg => cfg.CreateMap<RegisterViewModel, Models.User>());
             if (result.Succeeded)
             {
+               //register user at the time of account registeration
+               _user.AddUser(new Models.User { createdBy = model.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Email = model.Email, Username = model.Username, channelId = null });
+               HttpContext.Response.Cookies.Append("login", "false");
+               if (!HttpContext.Request.Cookies.ContainsKey("email"))
+                  HttpContext.Response.Cookies.Append("email", model.Email);
+               else
+               {
+                  HttpContext.Response.Cookies.Delete("email");
+                  HttpContext.Response.Cookies.Append("email", model.Email);
+               }
                if (signInManager.IsSignedIn(User))
                {
-                  //register user at the time of account registeration
-                  _user.AddUser(new Models.User { createdBy = model.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Email = model.Email, Username = model.Username, channelId = null });
-                  HttpContext.Response.Cookies.Append("login", "false");
-                  if (!HttpContext.Request.Cookies.ContainsKey("email"))
-                     HttpContext.Response.Cookies.Append("email", model.Email);
-                  else
-                  {
-                     HttpContext.Response.Cookies.Delete("email");
-                     HttpContext.Response.Cookies.Append("email", model.Email);
-                  }
                   return RedirectToAction("index", "home");
                }
                return RedirectToAction("login", "account");

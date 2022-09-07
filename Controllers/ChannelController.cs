@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using YouTube.Models.Interfaces;
 using YouTube.Models;
 using Microsoft.VisualBasic.FileIO;
+using System;
+using System.IO;
 
 namespace YouTube.Controllers
 {
@@ -88,34 +90,36 @@ namespace YouTube.Controllers
          if (videoObj != null)
          {
             string email = "";
-            HttpContext.Response.Cookies.Append("testreqdata", videoObj.Description);
             HttpContext.Request.Cookies.TryGetValue("email", out email);
             User thisUser = _user.GetUserByEmail(email);
-            HttpContext.Response.Cookies.Append("gottenemail", thisUser.Email);
             Channel channel = _channel.GetChannelByUserId(thisUser.Id);
             if (channel == null)
             {
                _channel.AddChannel(new Models.Channel { userId = thisUser.Id, createdBy = thisUser.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Name = thisUser.Username, JoinDate = DateTime.Now.ToString("dd/MM/yyyy") });
                channel = _channel.GetChannelByUserId(thisUser.Id);
             }
-            string combianedUrl = renameAssets();
+            string videourl = renameAssets(out string thumbanilurl);
             _video.AddVideo(new Models.video
             {
                Title = videoObj.Title,
                Description = videoObj.Description,
                Catagory = videoObj.Catagory,
-               Thumbnail = combianedUrl,
+               Thumbnail = thumbanilurl,
                ViewsCount = 0,
                TimeLine = DateTime.Now.ToString(),
                Likes = 0,
                channelId = channel.Id,
-               Url = combianedUrl,
+               Url = videourl,
+               createdAt = DateTime.Now,
+               createdBy = thisUser.Username,
+               modifiedAt = null,
+               modifiedBy = null
             });
             return new ObjectResult(new { status = "success" });
          }
          return new ObjectResult(new { status = "fail" });
       }
-      private string renameAssets()
+      private string renameAssets(out string tname)
       {
          string thumbnailFolder = Path.Combine(this.Environment.WebRootPath, "uploadedthumbnails");
          string videosFolder = Path.Combine(this.Environment.WebRootPath, "uploadedVideos");
@@ -123,9 +127,16 @@ namespace YouTube.Controllers
          HttpContext.Request.Cookies.TryGetValue("thisvideo", out videoname);
          HttpContext.Request.Cookies.TryGetValue("thisThumbnail", out thumbnailname);
          string newname = Guid.NewGuid().ToString();
-         FileSystem.RenameFile(videosFolder + videoname, videosFolder + newname);
-         FileSystem.RenameFile(thumbnailFolder + thumbnailname, thumbnailFolder + newname);
-         return newname;
+         string oldvideopath = Path.Combine(videosFolder, videoname);
+         string oldthumbnailpath = Path.Combine(thumbnailFolder, thumbnailname);
+         string videoExt = videoname.Split(".").Last();
+         string thumnailExt = thumbnailname.Split(".").Last();
+         string newvideoname = newname + "." + videoExt;
+         string newThumbnailname = newname + "." + thumnailExt;
+         FileSystem.RenameFile(oldvideopath, newvideoname);
+         FileSystem.RenameFile(oldthumbnailpath, newThumbnailname);
+         tname = newThumbnailname;
+         return newvideoname;
       }
    }
 }
