@@ -9,6 +9,7 @@ using YouTube.Models.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(typeof(Program));
 //Getting Connection string
 string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 //Getting Assembly Name
@@ -31,6 +32,7 @@ builder.Services.AddAntiforgery(o => o.HeaderName = "XSRF-TOKEN");
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddRazorPages();
+
 builder.Services.AddScoped<Ivideo, IvideoRepositry>();
 builder.Services.AddScoped<IUser, IUserRepositry>();
 builder.Services.AddScoped<IChannel, IChannelRepositry>();

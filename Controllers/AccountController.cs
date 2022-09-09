@@ -12,9 +12,10 @@ namespace YouTube.Controllers
       private readonly IChannel _channel;
       private readonly UserManager<IdentityUser> userManager;
       private readonly SignInManager<IdentityUser> signInManager;
-
-      public AccountController(UserManager<IdentityUser> uManager, SignInManager<IdentityUser> sManager, IUser user, IChannel channel)
+      private readonly IMapper _mapper;
+      public AccountController(UserManager<IdentityUser> uManager, SignInManager<IdentityUser> sManager, IUser user, IChannel channel, IMapper mapper)
       {
+         _mapper = mapper;
          userManager = uManager;
          signInManager = sManager;
          _user = user;
@@ -45,11 +46,13 @@ namespace YouTube.Controllers
                LockoutEnabled = false,
             };
             var result = await userManager.CreateAsync(user, model.Password);
-            var confgi = new MapperConfiguration(cfg => cfg.CreateMap<RegisterViewModel, Models.User>());
+
             if (result.Succeeded)
             {
                //register user at the time of account registeration
-               _user.AddUser(new Models.User { createdBy = model.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Email = model.Email, Username = model.Username, channelId = null });
+               Models.User newUser = _mapper.Map<Models.User>(model);
+               newUser.channelId = null;
+               _user.AddUser(newUser);
                HttpContext.Response.Cookies.Append("login", "false");
                if (!HttpContext.Request.Cookies.ContainsKey("email"))
                   HttpContext.Response.Cookies.Append("email", model.Email);

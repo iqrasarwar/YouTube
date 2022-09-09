@@ -8,145 +8,137 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = YouTube
 build_property.RootNamespace = YouTube
-build_property.ProjectDir = c:\Users\BUTT SYSTEMS\OneDrive\Desktop\FlowerStudio\YotubeClone\YouTube\
+build_property.ProjectDir = C:\Users\BUTT SYSTEMS\OneDrive\Desktop\FlowerStudio\YotubeClone\YouTube\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\BUTT SYSTEMS\OneDrive\Desktop\FlowerStudio\YotubeClone\YouTube
+build_property.MSBuildProjectDirectory = C:\Users\BUTT SYSTEMS\OneDrive\Desktop\FlowerStudio\YotubeClone\YouTube
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Pages/Channel/Channel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbm5lbFxDaGFubmVsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Pages/YouTubeServices/YouTubeServices.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWW91VHViZVNlcnZpY2VzXFlvdVR1YmVTZXJ2aWNlcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Account/Login.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Account/Register.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Channel/Index.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Channel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Channel/Upload.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Channel/Upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbm5lbFxVcGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Gaming.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Gaming.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxHYW1pbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Index.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Music.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Music.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxNdXNpYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/News.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/News.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxOZXdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Trending.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/Trending.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxUcmVuZGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/VideoCardLarge.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Explore/VideoCardLarge.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwbG9yZVxWaWRlb0NhcmRMYXJnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Home/Index.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/commentPartial.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/commentPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcY29tbWVudHNTZWN0aW9uXGNvbW1lbnRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/Default.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/commentsSection/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcY29tbWVudHNTZWN0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/FileUploadSection/Default.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/FileUploadSection/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcRmlsZVVwbG9hZFNlY3Rpb25cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Actions.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Actions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZUJhclNlY3Rpb25cQWN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Default.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZUJhclNlY3Rpb25cRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Partial.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/Partial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZUJhclNlY3Rpb25cUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/TopBarPartial.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SideBarSection/TopBarPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2lkZUJhclNlY3Rpb25cVG9wQmFyUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SuggestionsSection/Default.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SuggestionsSection/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3VnZ2VzdGlvbnNTZWN0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SuggestionsSection/VideoCardPartial.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/SuggestionsSection/VideoCardPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3VnZ2VzdGlvbnNTZWN0aW9uXFZpZGVvQ2FyZFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/videoSection/Default.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Components/videoSection/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcdmlkZW9TZWN0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Error.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Action.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Action.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xBY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Footer.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xGb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/VideoCard.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/VideoCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xWaWRlb0NhcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Videos.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/PartialViews/Videos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBhcnRpYWxWaWV3c1xWaWRlb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_LayoutPages.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_LayoutPages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Video/Index.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Video/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/_ViewImports.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/_ViewStart.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_Layout.cshtml]
+[C:/Users/BUTT SYSTEMS/OneDrive/Desktop/FlowerStudio/YotubeClone/YouTube/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bp439agymb
