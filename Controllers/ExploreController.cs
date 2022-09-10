@@ -1,19 +1,15 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using YouTube.Models;
-using YouTube.Models.Interfaces;
-using YouTube.Models.Repositries;
 
 namespace YouTube.Controllers
 {
    public class ExploreController : Controller
    {
       private readonly ILogger<ExploreController> _logger;
-      private readonly IExplore<video> _explore;
-      public ExploreController(ILogger<ExploreController> logger, IExplore<video> explore)
+      public ExploreController(ILogger<ExploreController> logger)
       {
          _logger = logger;
-         _explore = explore;
       }
 
       public IActionResult Index()
@@ -22,8 +18,8 @@ namespace YouTube.Controllers
       }
       public IActionResult Trending()
       {
-         List<video> trending = _explore.GetAllTrendingVideos();
-         return View(trending);
+         // List<video> trending = _explore.GetAllTrendingVideos();
+         return View();
       }
       public IActionResult Gaming()
       {

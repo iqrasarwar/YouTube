@@ -1,42 +1,45 @@
 using YouTube.Models.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace YouTube.Models.Repositries
 {
-   public class IvideoRepositry<video> : Ivideo<video> where video : class
+   public class IvideoRepositry : Ivideo
    {
       private readonly AppDbContext _appDbContext;
-      private DbSet<video> _videos;
       public IvideoRepositry(AppDbContext appDbContext)
       {
          _appDbContext = appDbContext;
-         _videos = _appDbContext.Set<video>();
       }
-      public video GetVideoById(int id)
+      public List<video> GetVideoById(int id)
       {
-         return null;
-         // return _videos.Find(id);
+         return _appDbContext.myVideos.Where(video => video.Id == id).ToList();
       }
       public void AddVideo(video video)
       {
-         _videos.Add(video);
+         _appDbContext.myVideos.Add(video);
          _appDbContext.SaveChanges();
       }
       public void UpdateVideo(video video)
       {
-         _videos.Update(video);
+         _appDbContext.myVideos.Update(video);
          _appDbContext.SaveChanges();
       }
       public void DeleteVideo(int id)
       {
-         var video = _videos.Find(id);
-         _videos.Remove(video);
+         var video = _appDbContext.myVideos.Find(id);
+         _appDbContext.myVideos.Remove(video);
          _appDbContext.SaveChanges();
       }
-      public IEnumerable<video> GetAllVideos()
+      public List<video> GetAllVideos()
       {
-         return _videos.ToList();
+         return _appDbContext.myVideos.ToList();
       }
-
+      public List<video> getVideoByCatagory(string catagory)
+      {
+         return _appDbContext.myVideos.Where(video => video.Catagory == catagory).ToList();
+      }
+      public List<video> getVideoByChannel(int channelId)
+      {
+         return _appDbContext.myVideos.Where(video => video.channel.Id == channelId).ToList();
+      }
    }
 }

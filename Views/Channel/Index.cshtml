@@ -1,0 +1,176 @@
+@using Microsoft.AspNetCore.Antiforgery
+@inject IAntiforgery AntiForgery;
+@{
+   Layout = "~/Views/Shared/_LayoutPages.cshtml";
+}
+<div class="positionBody videoBody">
+   <div class="channelTopBar">
+      <div class="channelTopBarRow">
+         <div class="channelProfile">
+            <img src="~/css/images/profile.jpg" />
+            <div class="channelInfo">
+               <div class="channelName">
+                  Iqra Sarwar
+               </div>
+               <div class="channelSubscribers">
+                  No Subscriber
+               </div>
+            </div>
+         </div>
+         <div class="channelButtons">
+            <button class="customButton">
+               Customize Channel
+            </button>
+            <button class="manageVideos">
+               Manage Videos
+            </button>
+         </div>
+      </div>
+      <nav class="channelTopBarRow navbar navbar-expand-lg navbar-light bg-light">
+         <ul class="navbar-nav">
+            <li class="nav-item active" id="channelHome">
+               HOME
+            </li>
+            <li class="nav-item" id="channelVideos">
+               VIDEOS
+            </li>
+            <li class="nav-item" id="channelPlaylists">
+               PLAYLISTS
+            </li>
+            <li class="nav-item" id="channelsFeatured">
+               CHANNELS
+            </li>
+            <li class="nav-item" id="channelsAbout">
+               ABOUT
+            </li>
+            <li class="nav-item">
+               <img src="~/css/images/search.png" />
+            </li>
+         </ul>
+      </nav>
+   </div>
+   <div class="channelHome" id="channelContent">
+      <img src="~/css/images/channel_illustration.svg" class="img" />
+      <p class="uploadHead">Upload a video to get started</p>
+      <p class="uploadSubHead">Start sharing your story and connecting with viewers. Videos you upload will show up
+         here.</p>
+      <button onclick="showUploader()">UPLOAD VIDEO</button>
+      <p class="learnMore">Learn more about <a href="">how to get started</a></p>
+   </div>
+   <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h4 class="modal-title">Upload Videos</h4>
+               <button type="button" class="btn modal-close-btn" data-bs-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+               <div class="uploaderContainer">
+                  <div class="uploadImgContainer">
+                     <input type="file" name="video" class="videoUpload" id="videoUploader" />
+                     <img src="/css/images/uploadBlock.png" class="uploadImg" />
+                  </div>
+                  <label for="video" class="videoFileLable">Choose Files</label>
+                  <span class="errMsg"></span>
+                  <p class="dropHead">Drag and drop video files to upload</p>
+                  <p class="dropSubHead">Your videos will be private until you publish them.</p>
+                  <button class="selectfilesBtn" type="submit" id="submit">UPLOAD VIDEO</button>
+                  <p class="termsStatment">By submitting your videos to YouTube, you acknowledge that you agree to
+                     YouTube's <a href="">Terms of Service</a> and
+                     <a href="">Community Guidelines</a>.Please be sure not to violate others' copyright or privacy
+                     rights. <a href="">Learn
+                        more</a>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+@section Scripts
+{
+<script type="text/javascript">
+   $("#videoUploader").on('change', function () {
+      var file = this.files[0];
+      var name = file.name;
+      var size = file.size;
+      var type = file.type;
+      document.getElementsByClassName("errMsg")[0].innerHTML = "";
+      document.getElementsByClassName("videoFileLable")[0].innerHTML = name + " Selected For Upload";
+      document.getElementsByClassName("dropHead")[0].style.display = "none";
+   });
+   function showUploader() {
+      $('#myModal').modal('show');
+   }
+   function closeUploader() {
+      $('#myModal').modal('hide');
+   }
+   let commonContent = "<img src='/css/images/channel_illustration.svg' class='img'/><p class='uploadHead'>Upload a video to get started</p><p class='uploadSubHead'>Start sharing your story and connecting with viewers. Videos you upload will show up here.</p> <button>UPLOAD VIDEO</button><p class='learnMore' >Learn more about <a href=''>how to get started</a></p>";
+   $(document).ready(function () {
+      $("#channelHome").click(function () {
+         $("#channelContent").html(commonContent);
+         clear();
+         $("#channelHome").addClass("active");
+      });
+      $("#channelVideos").click(function () {
+         $("#channelContent").html(commonContent + "");
+         clear();
+         $("#channelVideos").addClass("active");
+      });
+      $("#channelPlaylists").click(function () {
+         $("#channelContent").html("<p>Your Created and Saved playlists appear here.</p>");
+         clear();
+         $("#channelPlaylists").addClass("active");
+      });
+      $("#channelsFeatured").click(function () {
+         $("#channelContent").html("<p>This channel doesn't featue any other channels.</p>");
+         clear();
+         $("#channelsFeatured").addClass("active");
+
+      });
+      $("#channelsAbout").click(function () {
+         $("#channelContent").html("<div class='outerplaceholder'><div class='placeholder'></div><div class='stats'><p class='statsHead'>Stats</p><hr/><p>Joined 19 June 2019</p><hr/><p>Subscribers 0</p><hr/><p>Views 0</p><hr/></div></div>");
+         clear();
+         $("#channelsAbout").addClass("active");
+      });
+   });
+   function clear() {
+      $("#channelHome").removeClass("active");
+      $("#channelsAbout").removeClass("active");
+      $("#channelHome").removeClass("active");
+      $("#channelsFeatured").removeClass("active");
+      $("#channelVideos").removeClass("active");
+      $("#channelPlaylists").removeClass("active");
+   }
+   $("#submit").on('click', function () {
+      var files = $('#videoUploader').prop("files");
+      var url = "/Channel/Index";
+      var formData = new FormData();
+      if (files.length > 0) {
+         formData.append("video", files[0]);
+      }
+      $.ajax({
+         type: 'POST',
+         url: url,
+         data: formData,
+         cache: false,
+         contentType: false,
+         processData: false,
+         success: function (repo) {
+            if (repo.status == "success") {
+               document.getElementsByClassName("errMsg")[0].innerHTML = "";
+               document.getElementsByClassName("uploaderContainer")[0].innerHTML = "<b>" + files[0].name + " uploaded successfully!</b><br/><p>Proceed to fill the details form to complete uploading</p><button class='selectfilesBtn'><a href='/Channel/Upload'>Submit Details</a></button>";
+            }
+         },
+         error: function (xhr) {
+            document.getElementsByClassName("errMsg")[0].innerHTML = "Error occured while selecting files.";
+         }
+      });
+   });
+</script>
+}
+@* alert(files[0].name + " uploaded successfully"); *@
+@* closeUploader(); *@
+@* headers: {
+   'RequestVerificationToken': '@AntiForgery.GetAndStoreTokens(HttpContext).RequestToken'
+   }, *@

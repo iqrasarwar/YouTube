@@ -144,7 +144,7 @@
   color: #0d6efd !important;
   text-decoration: none;
 }
-.uploaderContiner {
+.uploaderContainer {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -172,4 +172,8 @@
 }
 .errMsg {
   color: red;
+}
+.selectfilesBtn a{
+  color: white !important;
+  text-decoration: none !important;
 }

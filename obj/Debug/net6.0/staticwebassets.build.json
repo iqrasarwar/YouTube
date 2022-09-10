@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NIDT2YBCTSzdwn5IGfCS0QIykqq1l80sBEYu1BLqhAs=",
+  "Hash": "qL1fuIxvhnleKvp4DRyaZBsnqowlH4acoMZdsl4OCXU=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -1919,6 +1919,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\localhost_3000_.png",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedVideos/localhost_3000_.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\localhost_3000_.png"
     }
   ]
 }
