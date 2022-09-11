@@ -75,5 +75,23 @@
    $('.MenuIcon').click(function (e) {
       $('.nav_bar').toggleClass('collapsed_expand');
    });
+
+   //SEARCH
+   $("#Search").keyup(function () {
+      var query = $("#Search").val();
+      $.ajax({
+         type: "POST",
+         url: "Explore/Search",
+         data: JSON.stringify({ query: $("#Search").val() }),
+         contentType: "application/json; charset=utf-8",
+         dataType: "json",
+         success: function (customers) {
+            console.log(customers);
+         },
+         error: function (err) {
+            console.log(err);
+         }
+      });
+   });
 </script>
 }

@@ -18,7 +18,6 @@ namespace YouTube.MappingConfigurations
               .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Username))
               .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email));
 
-
       }
    }
 }

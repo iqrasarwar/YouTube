@@ -36,6 +36,14 @@ namespace YouTube.Controllers
          List<video> news = _video.getVideoByCatagory("News");
          return View(news);
       }
+
+      [HttpPost]
+      public JsonResult Search([FromBody] string query)
+      {
+         List<video> customers = _video.SearchVideos(query);
+         Debug.WriteLine(query);
+         return Json(customers);
+      }
       public IActionResult Music()
       {
          return View();

@@ -41,5 +41,20 @@ namespace YouTube.Models.Repositries
       {
          return _appDbContext.myVideos.Where(video => video.channel.Id == channelId).ToList();
       }
+      public List<video> SearchVideos(String query)
+      {
+         List<video> videos = new List<video>();
+         foreach (video v in _appDbContext.myVideos)
+         {
+            if (query.Length > 0)
+            {
+               if (v.Title.Contains(query) || v.Description.Contains(query))
+               {
+                  videos.Add(v);
+               }
+            }
+         }
+         return videos;
+      }
    }
 }

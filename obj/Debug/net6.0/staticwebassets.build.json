@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pTx2h1QkKNeqjbS4yfEWzK3muJlTpguxxDskwjqCVZU=",
+  "Hash": "SGvi84aSApBbTxQJcQa6bcHYt1tHIkhjTLMWS+tWxBA=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -1938,6 +1938,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.webp",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedthumbnails/5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.webp"
+    },
+    {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\8b52cf20-8bf9-49e9-861a-26e68bdb9a16.png",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
@@ -1953,6 +1970,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\8b52cf20-8bf9-49e9-861a-26e68bdb9a16.png"
+    },
+    {
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.mp4",
+      "SourceId": "YouTube",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
+      "BasePath": "_content/YouTube",
+      "RelativePath": "uploadedVideos/5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\5d7bc71d-5a77-4cb8-a09b-c3a7ef89177d.mp4"
     },
     {
       "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\8b52cf20-8bf9-49e9-861a-26e68bdb9a16.mp4",

@@ -9,5 +9,6 @@ namespace YouTube.Models.Interfaces
       public void DeleteVideo(int id);
       public List<video> getVideoByCatagory(string catagory);
       public List<video> getVideoByChannel(int channelId);
+      public List<video> SearchVideos(string query);
    }
 }
