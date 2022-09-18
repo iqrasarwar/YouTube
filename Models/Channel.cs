@@ -4,6 +4,7 @@ namespace YouTube.Models
    {
       [Key]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      [ForeignKey("User")]
       public int Id { get; set; }
       public string? Name { get; set; }
       public string? ProfileImg { get; set; }
@@ -12,8 +13,8 @@ namespace YouTube.Models
       public string JoinDate { get; set; }
       public int Subscribers { get; set; }
       public virtual List<video> videos { get; set; }
-      [ForeignKey("User")]
-      public int userId { get; set; }
+      // [ForeignKey("User")]
+      // public int userId { get; set; }
       public virtual User User { get; set; }
       public Channel()
       { }
