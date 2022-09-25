@@ -39,10 +39,10 @@ namespace YouTube.Models.Repositries
       {
          return _context.user.FirstOrDefault(u => u.Email == email);
       }
-      public User GetUserByChannelId(int id)
-      {
-         return _context.user.FirstOrDefault(u => u.channelId == id);
-      }
+      // public User GetUserByChannelId(int id)
+      // {
+      //    return _context.user.FirstOrDefault(u => u.channelId == id);
+      // }
 
       public User GetUserByUserName(string username)
       {

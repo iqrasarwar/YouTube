@@ -10,10 +10,6 @@ namespace YouTube.Models
       public int likesCount { get; set; }
       public string TimeLine { get; set; }
       public virtual video video { get; set; }
-      [ForeignKey("User")]
-      public int userID { get; set; }
-      [ForeignKey("video")]
-      public int videoId { get; set; }
       public Comment()
       { }
    }

@@ -4,6 +4,7 @@ namespace YouTube.Models
    {
       [Key]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      [ForeignKey("Channel")]
       public int Id { get; set; }
       public string? Title { get; set; }
       public string? Description { get; set; }
@@ -13,9 +14,8 @@ namespace YouTube.Models
       public string TimeLine { get; set; }
       public string Catagory { get; set; }
       public int Likes { get; set; }
-      [ForeignKey("Channel")]
-      public int channelId { get; set; }
       public virtual Channel channel { get; set; }
+      public virtual List<Comment> comments { get; set; }
       public video()
       { }
    }

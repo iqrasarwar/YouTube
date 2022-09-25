@@ -9,6 +9,6 @@ namespace YouTube.Models.Interfaces
       public void DeleteUser(int id);
       public User GetUserByUserName(string username);
       public User GetUserByEmail(string email);
-      public User GetUserByChannelId(int id);
+      // public User GetUserByChannelId(int id);
    }
 }

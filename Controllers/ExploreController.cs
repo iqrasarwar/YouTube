@@ -38,7 +38,7 @@ namespace YouTube.Controllers
       }
 
       [HttpPost]
-      public JsonResult Search([FromBody] string query)
+      public JsonResult Search([FromBody] String query)
       {
          List<video> customers = _video.SearchVideos(query);
          Debug.WriteLine(query);

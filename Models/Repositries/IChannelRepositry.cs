@@ -35,12 +35,13 @@ namespace YouTube.Models.Repositries
          _context.channel.Remove(channel);
          _context.SaveChanges();
       }
-      public Channel GetChannelByUserId(int id)
+      public Channel GetChannelByEmail(string email)
       {
-         List<Channel> channellist = _context.channel.Where(c => c.userId == id).ToList();
-         if (channellist.Count == 0)
-            return null;
-         return channellist[0];
+         return _context.channel.FirstOrDefault(u => u.User.Email == email);
+      }
+      public Channel GetChannelByUserName(string username)
+      {
+         return _context.channel.FirstOrDefault(u => u.User.Username == username);
       }
    }
 }

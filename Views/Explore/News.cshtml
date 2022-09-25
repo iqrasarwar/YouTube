@@ -5,7 +5,7 @@
    <h4>News Videos</h4>
    @foreach (video v in @Model)
    {
-      <div class="card coulmn" data-title=@v.Url id="videoClickList">
+      <div class="card coulmn" data-arg0=@v.Url onclick="videoOpen">
          <img class="card-img-top column-img" src="~/uploadedthumbnails/@v.Thumbnail" alt="Card image cap">
          <div class="card-body column-body">
             <h6 class="video-title">@v.Title</h6>
@@ -20,35 +20,13 @@
          </div>
       </div>
    }
-   <div class="">
-      <partial name="VideoCardLarge.cshtml">
-         <partial name="VideoCardLarge.cshtml">
-            <partial name="VideoCardLarge.cshtml">
-               <partial name="VideoCardLarge.cshtml">
-                  <partial name="VideoCardLarge.cshtml">
-                     <partial name="VideoCardLarge.cshtml">
-                        <partial name="VideoCardLarge.cshtml">
-                           <partial name="VideoCardLarge.cshtml">
-                              <partial name="VideoCardLarge.cshtml">
-                                 <partial name="VideoCardLarge.cshtml">
-                                    <partial name="VideoCardLarge.cshtml">
-                                       <partial name="VideoCardLarge.cshtml">
-                                          <partial name="VideoCardLarge.cshtml">
-                                             <partial name="VideoCardLarge.cshtml">
-                                                <partial name="VideoCardLarge.cshtml">
-                                                   <partial name="VideoCardLarge.cshtml">
-                                                      <partial name="VideoCardLarge.cshtml">
-                                                         <partial name="VideoCardLarge.cshtml">
-                                                            <partial name="VideoCardLarge.cshtml">
-   </div>
 </div>
 @section Scripts
 {
-<script type="text/javascript">
-   @* $("#videoClickList").on("click", function () {
-         console.log("Clicked");
-         string url = $("#videoClickList").data("title");
-         console.log(url);
-         }); *@
+<script>
+   @* function videoOpen(event) {
+      let videoUrl = event.target.getAttribute("data-arg0");
+      console.log(videoUrl);
+   } *@
 </script>
 }

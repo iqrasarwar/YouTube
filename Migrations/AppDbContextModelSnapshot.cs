@@ -225,8 +225,6 @@ namespace YouTube.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
                     b.Property<string>("JoinDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -258,12 +256,7 @@ namespace YouTube.Migrations
                     b.Property<string>("modifiedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("userId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("userId");
 
                     b.ToTable("channel");
                 });
@@ -283,6 +276,9 @@ namespace YouTube.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
@@ -298,15 +294,12 @@ namespace YouTube.Migrations
                     b.Property<string>("modifiedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("userID")
-                        .HasColumnType("int");
-
                     b.Property<int>("videoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("userID");
+                    b.HasIndex("UserId");
 
                     b.HasIndex("videoId");
 
@@ -333,9 +326,6 @@ namespace YouTube.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<int?>("channelId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");
 
@@ -349,8 +339,6 @@ namespace YouTube.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("channelId");
 
                     b.ToTable("user");
                 });
@@ -465,8 +453,8 @@ namespace YouTube.Migrations
             modelBuilder.Entity("YouTube.Models.Channel", b =>
                 {
                     b.HasOne("YouTube.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("userId")
+                        .WithOne("Channel")
+                        .HasForeignKey("YouTube.Models.Channel", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -477,12 +465,12 @@ namespace YouTube.Migrations
                 {
                     b.HasOne("YouTube.Models.User", "User")
                         .WithMany("comments")
-                        .HasForeignKey("userID")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("YouTube.Models.video", "video")
-                        .WithMany()
+                        .WithMany("comments")
                         .HasForeignKey("videoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -490,15 +478,6 @@ namespace YouTube.Migrations
                     b.Navigation("User");
 
                     b.Navigation("video");
-                });
-
-            modelBuilder.Entity("YouTube.Models.User", b =>
-                {
-                    b.HasOne("YouTube.Models.Channel", "Channel")
-                        .WithMany()
-                        .HasForeignKey("channelId");
-
-                    b.Navigation("Channel");
                 });
 
             modelBuilder.Entity("YouTube.Models.video", b =>
@@ -518,6 +497,14 @@ namespace YouTube.Migrations
                 });
 
             modelBuilder.Entity("YouTube.Models.User", b =>
+                {
+                    b.Navigation("Channel")
+                        .IsRequired();
+
+                    b.Navigation("comments");
+                });
+
+            modelBuilder.Entity("YouTube.Models.video", b =>
                 {
                     b.Navigation("comments");
                 });

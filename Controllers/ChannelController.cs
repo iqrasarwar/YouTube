@@ -89,14 +89,18 @@ namespace YouTube.Controllers
       {
          if (videoObj != null)
          {
-            string email = "";
-            HttpContext.Request.Cookies.TryGetValue("email", out email);
-            User thisUser = _user.GetUserByEmail(email);
-            Channel channel = _channel.GetChannelByUserId(thisUser.Id);
+            string username = "";
+            HttpContext.Request.Cookies.TryGetValue("username", out username);
+            if (username.Equals(null))
+            {
+               return RedirectToAction("login", "account");
+            }
+            User thisUser = _user.GetUserByUserName(username);
+            Channel channel = _channel.GetChannelByUserName(username);
             if (channel == null)
             {
-               _channel.AddChannel(new Models.Channel { userId = thisUser.Id, createdBy = thisUser.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Name = thisUser.Username, JoinDate = DateTime.Now.ToString("dd/MM/yyyy") });
-               channel = _channel.GetChannelByUserId(thisUser.Id);
+               _channel.AddChannel(new Models.Channel { createdBy = thisUser.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Name = thisUser.Username, JoinDate = DateTime.Now.ToString("dd/MM/yyyy"), User = thisUser });
+               channel = _channel.GetChannelByEmail(thisUser.Email);
             }
             string videourl = renameAssets(out string thumbanilurl);
             _video.AddVideo(new Models.video
@@ -108,7 +112,7 @@ namespace YouTube.Controllers
                ViewsCount = 0,
                TimeLine = DateTime.Now.ToString(),
                Likes = 0,
-               channelId = channel.Id,
+               channel = channel,
                Url = videourl,
                createdAt = DateTime.Now,
                createdBy = thisUser.Username,
