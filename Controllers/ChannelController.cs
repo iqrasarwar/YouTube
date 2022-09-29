@@ -99,7 +99,7 @@ namespace YouTube.Controllers
             Channel channel = _channel.GetChannelByUserName(username);
             if (channel == null)
             {
-               _channel.AddChannel(new Models.Channel { createdBy = thisUser.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Name = thisUser.Username, JoinDate = DateTime.Now.ToString("dd/MM/yyyy"), User = thisUser });
+               _channel.AddChannel(new Models.Channel { createdBy = thisUser.Username, createdAt = DateTime.Now, modifiedBy = "", modifiedAt = null, Name = thisUser.Username, JoinDate = DateTime.Now.ToString("dd/MM/yyyy"), userId = thisUser.Id });
                channel = _channel.GetChannelByEmail(thisUser.Email);
             }
             string videourl = renameAssets(out string thumbanilurl);
@@ -112,12 +112,9 @@ namespace YouTube.Controllers
                ViewsCount = 0,
                TimeLine = DateTime.Now.ToString(),
                Likes = 0,
-               channel = channel,
+               channelId = channel.Id,
                Url = videourl,
-               createdAt = DateTime.Now,
                createdBy = thisUser.Username,
-               modifiedAt = null,
-               modifiedBy = null
             });
             return new ObjectResult(new { status = "success" });
          }

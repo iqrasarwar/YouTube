@@ -8,7 +8,6 @@ using YouTube.Models.Repositries;
 using YouTube.Models.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddAutoMapper(typeof(Program));
 //Getting Connection string
 string connString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -49,7 +48,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 app.UseAuthorization();
 

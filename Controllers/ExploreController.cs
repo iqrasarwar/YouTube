@@ -38,11 +38,11 @@ namespace YouTube.Controllers
       }
 
       [HttpPost]
-      public JsonResult Search([FromBody] String query)
+      public JsonResult Search([FromBody] Object query)
       {
-         List<video> customers = _video.SearchVideos(query);
+         List<video> videosReturned = _video.SearchVideos(query.ToString());
          Debug.WriteLine(query);
-         return Json(customers);
+         return Json(videosReturned);
       }
       public IActionResult Music()
       {

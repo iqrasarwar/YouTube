@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+    youtube:
+        build: .
+        ports:
+            - "80:8080"
+    mssql-server:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "iqra.M012"
+            ACCEPT_EULA: "Y"
+            MSSQL_PID: Express
+        ports:
+          - "7000:7000"

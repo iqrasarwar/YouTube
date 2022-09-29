@@ -54,7 +54,15 @@ namespace YouTube.Models.Repositries
                }
             }
          }
+         if (query.Length == 0)
+         {
+            videos = _appDbContext.myVideos.ToList();
+         }
          return videos;
+      }
+      public video GetVideoByUrl(string url)
+      {
+         return _appDbContext.myVideos.FirstOrDefault(video => video.Url == url);
       }
    }
 }

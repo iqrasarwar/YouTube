@@ -10,5 +10,6 @@ namespace YouTube.Models.Interfaces
       // public Channel GetChannelByUserId(int id);
       public Channel GetChannelByEmail(string email);
       public Channel GetChannelByUserName(string username);
+      public Channel GetChannelByVideo(video v);
    }
 }

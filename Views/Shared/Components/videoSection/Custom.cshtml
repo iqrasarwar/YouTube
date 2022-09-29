@@ -1,0 +1,84 @@
+<div class="video">
+   <video class="video_iframe" src="~/uploadedVideos/@Model.Url" autoplay controls loops muted
+      poster="~/uploadedthumnails/@Model.Url" />
+</div>
+<div class="video_Meta">
+   @* <div class="video_Tags">
+      #karma #smile #character
+      </div> *@
+   <div class="video_Title">
+      @Model.Title
+   </div>
+   <div class="video_Details">
+      <div class="video_Description">
+         <div class="video_stats">
+            <span class="views">99,254 views</span>
+            <span class="dot"> . </span>
+            <span class="date">Apr 25, 2021</span>
+         </div>
+         <div class="video_Actions">
+            <span class="likes">
+               <img src="~/css/images/like.png" alt="like">
+               <span class="count">99,254</span>
+            </span>
+            <span class="dislikes">
+               <img src="~/css/images/dislike.png" alt="dislike">
+               <span class="count">DISLIKE</span>
+            </span>
+            <span class="share">
+               <img src="~/css/images/share.png" alt="share">
+               <span class="count">SHARE</span>
+            </span>
+            <span class="save">
+               <img src="~/css/images/save.png" alt="save">
+               <span class="count">SAVE</span>
+            </span>
+         </div>
+
+      </div>
+      <hr class="video_hr">
+      <div class="video_Channel">
+         <img src="~/css/images/profile.jpg" alt="" class="profile_img">
+         <div class="video_Meta_details">
+            <div class="channel_Profile">
+               <div class="channel_details">
+                  <div class="channel_Name_Text">
+                     Gautam Buddha
+                     <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  </div>
+                  <div class="channel_Subscribers">
+                     1.2M subscribers
+                  </div>
+               </div>
+               <button class="subscribe_btn">
+                  Subscribe
+               </button>
+            </div>
+            <div class="video_content_description">
+               Buddha quotes on wisdom
+               Buddha quotes on life
+               Gautam buddha whattsap status
+               English inspirational quotes
+               Status
+               This is a motivational video for everyone who is looking for a positive attitude and a positive
+               attitude is the key to success. This necessity was
+               as personal to me as it was universal.
+               This need combined with my passion for
+               teaching resulted in
+               <span id="points">...</span>
+               <span id="moreText" class="moreText">
+                  GeeksforGeeks as
+                  we know today. My message to you, in
+                  our inaugural edition of Geeks Digest,
+                  would be that if you are looking for
+                  a problem to work on, you don’t need
+                  to look very far for it. All you should
+                  do is to look around yourself.
+               </span>
+               <p onclick="toggleText()" id="textButton" class="textToggle">SHOW MORE</p>
+            </div>
+         </div>
+      </div>
+      <hr>
+   </div>
+</div>

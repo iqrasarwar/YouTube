@@ -1,36 +1,37 @@
-﻿@{
-    string column = (String)ViewData["column"];
+﻿@model YouTube.ViewModels.VideoChannel
+@{
+  string column = (String)ViewData["column"];
 }
-@if(column == "column")
+@if (column == "column")
 {
-    <div class="card col-lg-3 col-md-4 col-sm-6" >
-      <img class="card-img-top" src="~/css/images/profile.jpg" alt="Card image cap">
-      <div class="card-body">
-        <h6 class="video-title">Partial Views Tutorial In DotNet | C# | Web Developmet </h6>
-        <p class="video-channel">Learn DotNet</p>
-        <p>
-            <span class="video-views">30k Views</span>
-            <span class="dot">.</span>
-            <span class="video-time">7 days ago</span>
-        </p>
-      </div>
+  <div class="card col-lg-3 col-md-4 col-sm-6">
+    <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <h6 class="video-title">@Model.v.Title</h6>
+      <p class="video-channel">@Model.c.Name</p>
+      <p>
+        <span class="video-views">@Model.v.ViewsCount</span>
+        <span class="dot">.</span>
+        <span class="video-time">@Model.v.TimeLine</span>
+      </p>
     </div>
+  </div>
 }
 else
 {
-    <div class="card columnCard col-lg-3 col-md-4 col-sm-6" >
-  <img class="card-img-top" src="~/css/images/profile.jpg" alt="Card image cap">
-  <div class="card-body">
-    <img class="channel-pic" src="~/css/images/profile.jpg" />
-    <div class="video-info">
-        <h6 class="video-title">Partial Views Tutorial In DotNet | C# | Web Developmet </h6>
-        <p class="video-channel">Learn DotNet</p>
+  <div class="card columnCard col-lg-3 col-md-4 col-sm-6">
+    <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
+    <div class="card-body">
+      <img class="channel-pic" src="~/css/images/profile.jpg" />
+      <div class="video-info">
+        <h6 class="video-title">@Model.v.Title</h6>
+        <p class="video-channel">@Model.c.Name</p>
         <p class="video-views video-time">
-            30k Views
-            <span class="dot">.</span>
-            7 days ago
+          @Model.v.ViewsCount views
+          <span class="dot">.</span>
+          @Model.v.TimeLine
         </p>
+      </div>
     </div>
   </div>
-</div>
 }

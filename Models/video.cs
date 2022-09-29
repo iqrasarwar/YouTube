@@ -14,6 +14,7 @@ namespace YouTube.Models
       public string TimeLine { get; set; }
       public string Catagory { get; set; }
       public int Likes { get; set; }
+      public int channelId { get; set; }
       public virtual Channel channel { get; set; }
       public virtual List<Comment> comments { get; set; }
       public video()

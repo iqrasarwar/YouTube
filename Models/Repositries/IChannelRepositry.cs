@@ -43,5 +43,9 @@ namespace YouTube.Models.Repositries
       {
          return _context.channel.FirstOrDefault(u => u.User.Username == username);
       }
+      public Channel GetChannelByVideo(video v)
+      {
+         return _context.channel.FirstOrDefault(u => u.Id == v.channelId);
+      }
    }
 }

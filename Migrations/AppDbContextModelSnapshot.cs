@@ -16,7 +16,7 @@ namespace YouTube.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -256,6 +256,9 @@ namespace YouTube.Migrations
                     b.Property<string>("modifiedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("userId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("channel");
@@ -325,6 +328,9 @@ namespace YouTube.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("channelId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("createdAt")
                         .HasColumnType("datetime2");

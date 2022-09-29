@@ -4,6 +4,7 @@ namespace YouTube.Models.Interfaces
    {
       public List<video> GetAllVideos();
       public List<video> GetVideoById(int id);
+      public video GetVideoByUrl(string url);
       public void AddVideo(video video);
       public void UpdateVideo(video video);
       public void DeleteVideo(int id);

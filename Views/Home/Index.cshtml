@@ -11,7 +11,7 @@
         <hr class="positionBody hr" />
     </div>
     <div class="positionBody videoBody">
-        <partial name="PartialViews/Videos" />
+        <partial name="PartialViews/Videos" model=@Model />
     </div>
 </div>
 
@@ -25,3 +25,4 @@
     });
 </script>
 }
+@* "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=YouTubeV2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" *@

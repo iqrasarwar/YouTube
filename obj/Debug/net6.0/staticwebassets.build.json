@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AgUne0OYGXR85JjcfD5+IFTPUKgqU5MPpge/LSvrPzY=",
+  "Hash": "CPU6UXTYTz2uBHHQDJOEXxVdTqhi4tcTXj6COQKFc1s=",
   "Source": "YouTube",
   "BasePath": "_content/YouTube",
   "Mode": "Default",
@@ -1938,12 +1938,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\4cec3707-7080-4196-a6cb-68b22d17c0da.webp",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\accounting.jpg",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedthumbnails/4cec3707-7080-4196-a6cb-68b22d17c0da.webp",
+      "RelativePath": "uploadedthumbnails/accounting.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1952,15 +1952,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\4cec3707-7080-4196-a6cb-68b22d17c0da.webp"
+      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\accounting.jpg"
     },
     {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedthumbnails\\90c7eec1-285a-4c1d-9145-7eb9911fe043.png",
+      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\accounting.mp4",
       "SourceId": "YouTube",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
       "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedthumbnails/90c7eec1-285a-4c1d-9145-7eb9911fe043.png",
+      "RelativePath": "uploadedVideos/accounting.mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1969,41 +1969,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedthumbnails\\90c7eec1-285a-4c1d-9145-7eb9911fe043.png"
-    },
-    {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\4cec3707-7080-4196-a6cb-68b22d17c0da.mp4",
-      "SourceId": "YouTube",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
-      "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedVideos/4cec3707-7080-4196-a6cb-68b22d17c0da.mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedVideos\\4cec3707-7080-4196-a6cb-68b22d17c0da.mp4"
-    },
-    {
-      "Identity": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\uploadedVideos\\90c7eec1-285a-4c1d-9145-7eb9911fe043.mp4",
-      "SourceId": "YouTube",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\BUTT SYSTEMS\\OneDrive\\Desktop\\FlowerStudio\\YotubeClone\\YouTube\\wwwroot\\",
-      "BasePath": "_content/YouTube",
-      "RelativePath": "uploadedVideos/90c7eec1-285a-4c1d-9145-7eb9911fe043.mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\uploadedVideos\\90c7eec1-285a-4c1d-9145-7eb9911fe043.mp4"
+      "OriginalItemSpec": "wwwroot\\uploadedVideos\\accounting.mp4"
     }
   ]
 }

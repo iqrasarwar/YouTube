@@ -61,14 +61,12 @@
    });
    $("#GamingSection").on('click', function () {
       $.get("/Explore/Gaming", function (data, status) {
-         @* console.log(data); *@
-            $(".SectionContent").html(data);
+         $(".SectionContent").html(data);
       });
    });
    $("#NewsSection").on('click', function () {
       $.get("/Explore/News", function (data, status) {
-         @* console.log(data); *@
-            $(".SectionContent").html(data);
+         $(".SectionContent").html(data);
       });
    });
    //SIDE BAR SECTION SCRIPTS
@@ -82,11 +80,12 @@
       $.ajax({
          type: "POST",
          url: "Explore/Search",
-         data: JSON.stringify({ query: $("#Search").val() }),
+         data: JSON.stringify($("#Search").val()),
          contentType: "application/json; charset=utf-8",
          dataType: "json",
-         success: function (customers) {
-            console.log(customers);
+         success: function (videosReturned) {
+            $(".SectionContent").html(jsonToHtml(videosReturned));
+            console.log(videosReturned);
          },
          error: function (err) {
             console.log(err);
@@ -94,10 +93,18 @@
       });
    });
 
-   function videoOpen(event) {
-      console.log("xnbvnfdbn");
-      let videoUrl = event.target.getAttribute("data-arg0");
-      console.log(videoUrl);
+   function jsonToHtml(jsonVideos) {
+      var html = "";
+      for (var i = 0; i < jsonVideos.length; i++) {
+         html += "<div class='card coulmn' onclick='videoOpen'><img class='card-img-top column-img' src='/uploadedthumbnails/" + jsonVideos[i].thumbnail + "' alt='Card image cap'><div class='card-body column-body'><h6 class='video-title'>" + jsonVideos[i].title + "</h6><p><span class='video-channel'>Learn DotNet</span><span class='dot'>.</span><span class='video-views'>0 Views</span><span class='dot'>.</span><span class='video-time'>7 days ago</span></p><p>" + jsonVideos[i].description + "</p></div></div>";
+      }
+      return html;
    }
+
+   @* function videoOpen(event) {
+         console.log("xnbvnfdbn");
+         let videoUrl = event.target.getAttribute("data-arg0");
+         console.log(videoUrl);
+         } *@
 </script>
 }

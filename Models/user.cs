@@ -11,6 +11,7 @@ namespace YouTube.Models
       [Required]
       public string Email { get; set; }
       public string? ProfileImg { get; set; }
+      public int channelId { get; set; }
       public virtual Channel Channel { get; set; }
       public virtual List<Comment> comments { get; set; }
       public User()

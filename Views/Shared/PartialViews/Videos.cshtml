@@ -1,31 +1,11 @@
-﻿@{
+﻿@model List<YouTube.ViewModels.VideoChannel>
+@{
     ViewData["column"] = "";
-
 }
 
 <div class="col-12 col-lg-12 videos">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
-    <partial name="VideoCard.cshtml" view-data="ViewData">
+    @foreach (var v in @Model)
+    {
+        <partial name="VideoCard.cshtml" view-data="ViewData" model=@v />
+    }
 </div>
