@@ -1,1 +1,7 @@
 # YouTube
+Youtube Clone in C#
+- MVC
+- ASP.NET
+- ENTITY FRAMEWORK
+- ENTITY IDENTITY
+- DOCKERIZED
