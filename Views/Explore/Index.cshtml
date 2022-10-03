@@ -44,14 +44,12 @@
 <script>
    $(document).ready(function () {
       $.get("/Explore/Trending", function (data, status) {
-         @* console.log(data); *@
-            $(".SectionContent").html(data);
+         $(".SectionContent").html(data);
       });
    });
    $("#TrendingSection").on('click', function () {
       $.get("/Explore/Trending", function (data, status) {
-         @* console.log(data); *@
-            $(".SectionContent").html(data);
+         $(".SectionContent").html(data);
       });
    });
    $("#MusicSection").on('click', function () {
@@ -66,6 +64,11 @@
    });
    $("#NewsSection").on('click', function () {
       $.get("/Explore/News", function (data, status) {
+         $(".SectionContent").html(data);
+      });
+   });
+   $("#SportsSection").on('click', function () {
+      $.get("/Explore/Sports", function (data, status) {
          $(".SectionContent").html(data);
       });
    });
@@ -96,7 +99,8 @@
    function jsonToHtml(jsonVideos) {
       var html = "";
       for (var i = 0; i < jsonVideos.length; i++) {
-         html += "<div class='card coulmn' onclick='videoOpen'><img class='card-img-top column-img' src='/uploadedthumbnails/" + jsonVideos[i].thumbnail + "' alt='Card image cap'><div class='card-body column-body'><h6 class='video-title'>" + jsonVideos[i].title + "</h6><p><span class='video-channel'>Learn DotNet</span><span class='dot'>.</span><span class='video-views'>0 Views</span><span class='dot'>.</span><span class='video-time'>7 days ago</span></p><p>" + jsonVideos[i].description + "</p></div></div>";
+         console.log(jsonVideos[i]);
+         html += "<a href='/Video/Video/" + jsonVideos[i].url + "' class='removeLink'><div class='card coulmn'><img class='card-img-top column-img' src='/uploadedthumbnails/" + jsonVideos[i].thumbnail + "'alt='Card image cap'><div class='card-body column-body'><h6 class='video-title'>" + jsonVideos[i].title + "</h6><p><span class='video-channel'>Learn DotNet</span><span class='dot'>.</span><span class='video-views'>" + jsonVideos[i].viewsCount + " views</span><span class='dot'>.</span><span class='video-time'>" + jsonVideos[i].timeLine + " 7 days ago</span></p><p>" + jsonVideos[i].description + "</p></div></div></a>"
       }
       return html;
    }

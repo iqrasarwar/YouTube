@@ -294,3 +294,8 @@ h6 {
   height: 25px;
   border-radius: 50%;
 }
+.removeLink
+{
+  text-decoration: none;
+  color: black !important;
+}

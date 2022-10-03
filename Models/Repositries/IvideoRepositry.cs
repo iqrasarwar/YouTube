@@ -48,7 +48,26 @@ namespace YouTube.Models.Repositries
          {
             if (query.Length > 0)
             {
-               if (v.Title.Contains(query) || v.Description.Contains(query))
+               if (v.Title.Contains(query))
+               {
+                  videos.Add(v);
+               }
+            }
+         }
+         if (query.Length == 0)
+         {
+            videos = _appDbContext.myVideos.ToList();
+         }
+         return videos;
+      }
+      public List<video> SearchVideosByDesc(string query)
+      {
+         List<video> videos = new List<video>();
+         foreach (video v in _appDbContext.myVideos)
+         {
+            if (query.Length > 0)
+            {
+               if (v.Description.Contains(query))
                {
                   videos.Add(v);
                }

@@ -21,15 +21,23 @@ namespace YouTube.Controllers
       }
       public IActionResult Trending()
       {
-         // List<video> trending = _video.GetAllTrendingVideos();
-         return View();
+         List<video> trending = _video.GetAllVideos();
+         return View(trending);
+      }
+      public IActionResult Sports()
+      {
+         List<video> sports = _video.getVideoByCatagory("Sports");
+         return View(sports);
       }
       public IActionResult Gaming()
       {
-         // List<video> gaming = _video.getVideoByCatagory("Gaming");
-         // return View(gaming);
-         List<video> news = _video.getVideoByCatagory("News");
-         return View(news);
+         List<video> gaming = _video.getVideoByCatagory("Gaming");
+         return View(gaming);
+      }
+      public IActionResult Music()
+      {
+         List<video> music = _video.getVideoByCatagory("Music");
+         return View(music);
       }
       public IActionResult News()
       {
@@ -43,10 +51,6 @@ namespace YouTube.Controllers
          List<video> videosReturned = _video.SearchVideos(query.ToString());
          Debug.WriteLine(query);
          return Json(videosReturned);
-      }
-      public IActionResult Music()
-      {
-         return View();
       }
       [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
       public IActionResult Error()

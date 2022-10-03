@@ -5,7 +5,7 @@
    <h4>News Videos</h4>
    @foreach (video v in @Model)
    {
-      <a asp-action="Video" asp-controller="Video" asp-route-id="@v.Url">
+      <a asp-action="Video" asp-controller="Video" asp-route-id="@v.Url" class="removeLink">
          <div class="card coulmn" onclick="videoOpen">
             <img class="card-img-top column-img" src="~/uploadedthumbnails/@v.Thumbnail" alt="Card image cap">
             <div class="card-body column-body">
@@ -23,8 +23,3 @@
       </a>
    }
 </div>
-@section Scripts
-{
-<script>
-</script>
-}

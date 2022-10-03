@@ -78,6 +78,7 @@
          data: JSON.stringify(data),
          success: function (result) {
             alert('Successfully received Data ');
+            window.location.href = "@Url.Action("Index","Home")";
          },
          error: function () {
             alert('Failed to receive the Data');

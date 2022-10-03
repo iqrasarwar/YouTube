@@ -3,7 +3,6 @@ namespace YouTube.Models
    public class Channel : AduitInfo
    {
       [Key]
-      [ForeignKey("User")]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
       public int Id { get; set; }
       public string? Name { get; set; }
@@ -14,7 +13,7 @@ namespace YouTube.Models
       public int Subscribers { get; set; }
       public virtual List<video> videos { get; set; }
       public virtual User User { get; set; }
-
+      [ForeignKey("User")]
       public int userId { get; set; }
       public Channel()
       { }

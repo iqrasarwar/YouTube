@@ -4,34 +4,38 @@
 }
 @if (column == "column")
 {
-  <div class="card col-lg-3 col-md-4 col-sm-6">
-    <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
-    <div class="card-body">
-      <h6 class="video-title">@Model.v.Title</h6>
-      <p class="video-channel">@Model.c.Name</p>
-      <p>
-        <span class="video-views">@Model.v.ViewsCount</span>
-        <span class="dot">.</span>
-        <span class="video-time">@Model.v.TimeLine</span>
-      </p>
-    </div>
-  </div>
-}
-else
-{
-  <div class="card columnCard col-lg-3 col-md-4 col-sm-6">
-    <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
-    <div class="card-body">
-      <img class="channel-pic" src="~/css/images/profile.jpg" />
-      <div class="video-info">
+  <a asp-action="Video" asp-controller="Video" asp-route-id="@Model.v.Url" class="removeLink">
+    <div class="card col-lg-3 col-md-4 col-sm-6">
+      <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
+      <div class="card-body">
         <h6 class="video-title">@Model.v.Title</h6>
         <p class="video-channel">@Model.c.Name</p>
-        <p class="video-views video-time">
-          @Model.v.ViewsCount views
+        <p>
+          <span class="video-views">@Model.v.ViewsCount</span>
           <span class="dot">.</span>
-          @Model.v.TimeLine
+          <span class="video-time">@Model.v.TimeLine</span>
         </p>
       </div>
     </div>
-  </div>
+  </a>
+}
+else
+{
+  <a asp-action="Video" asp-controller="Video" asp-route-id="@Model.v.Url" class="removeLink">
+    <div class="card columnCard col-lg-3 col-md-4 col-sm-6">
+      <img class="card-img-top" src="~/uploadedthumbnails/@Model.v.Thumbnail" alt="Card image cap">
+      <div class="card-body">
+        <img class="channel-pic" src="~/css/images/profile.jpg" />
+        <div class="video-info">
+          <h6 class="video-title">@Model.v.Title</h6>
+          <p class="video-channel">@Model.c.Name</p>
+          <p class="video-views video-time">
+            @Model.v.ViewsCount views
+            <span class="dot">.</span>
+            @Model.v.TimeLine
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
 }

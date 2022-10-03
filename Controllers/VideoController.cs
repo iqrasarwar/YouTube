@@ -16,7 +16,7 @@ namespace YouTube.Controllers
          _videos = video;
       }
 
-      public IActionResult Index(string id)
+      public IActionResult Index()
       {
          return View();
       }
@@ -24,6 +24,7 @@ namespace YouTube.Controllers
       public IActionResult Video(string id)
       {
          video v = _videos.GetVideoByUrl(id);
+         List<video> exclude = _videos.GetAllVideos();
          return View("Video", v);
       }
       public IActionResult AddVideo()

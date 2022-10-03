@@ -225,6 +225,8 @@ namespace YouTube.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<string>("JoinDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -260,6 +262,9 @@ namespace YouTube.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("userId")
+                        .IsUnique();
 
                     b.ToTable("channel");
                 });
@@ -460,7 +465,7 @@ namespace YouTube.Migrations
                 {
                     b.HasOne("YouTube.Models.User", "User")
                         .WithOne("Channel")
-                        .HasForeignKey("YouTube.Models.Channel", "Id")
+                        .HasForeignKey("YouTube.Models.Channel", "userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

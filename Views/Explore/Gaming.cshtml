@@ -1,29 +1,25 @@
 @{
-   Layout = null;
+    Layout = null;
 }
-
-
 <div class="trendingVideosContainer">
-<h4>Gaming Videos</h4>
-    <div class="">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-        <partial name="VideoCardLarge.cshtml">
-    </div>
+    <h4>Gaming Videos</h4>
+    @foreach (video v in @Model)
+    {
+        <a asp-action="Video" asp-controller="Video" asp-route-id="@v.Url" class="removeLink">
+            <div class="card coulmn" onclick="videoOpen">
+                <img class="card-img-top column-img" src="~/uploadedthumbnails/@v.Thumbnail" alt="Card image cap">
+                <div class="card-body column-body">
+                    <h6 class="video-title">@v.Title</h6>
+                    <p>
+                        <span class="video-channel">Learn DotNet</span>
+                        <span class="dot">.</span>
+                        <span class="video-views">@v.ViewsCount Views</span>
+                        <span class="dot">.</span>
+                        <span class="video-time">@v.TimeLine 7 days ago</span>
+                    </p>
+                    <p>@v.Description</p>
+                </div>
+            </div>
+        </a>
+    }
 </div>

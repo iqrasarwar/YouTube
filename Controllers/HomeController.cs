@@ -27,11 +27,18 @@ namespace YouTube.Controllers
          foreach (video vid in v)
          {
             Channel chanel = _channel.GetChannelByVideo(vid);
-            obj.Add(new VideoChannel{v = vid , c = chanel});
+            obj.Add(new VideoChannel { v = vid, c = chanel });
          }
          return View(obj);
       }
 
+      [HttpPost]
+      public JsonResult Search([FromBody] Object query)
+      {
+         List<video> videosReturned = _videos.SearchVideos(query.ToString());
+         Debug.WriteLine(query);
+         return Json(videosReturned);
+      }
       [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
       public IActionResult Error()
       {

@@ -10,19 +10,80 @@
         <partial name="Components/SideBarSection/TopBarPartial" />
         <hr class="positionBody hr" />
     </div>
-    <div class="positionBody videoBody">
+    <div class="positionBody videoBody" id="returnedVideos">
         <partial name="PartialViews/Videos" model=@Model />
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Search By Description</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="byDesc" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 @section Scripts
 {
 <script>
-
     //SIDE BAR SECTION SCRIPTS
     $('.MenuIcon').click(function (e) {
         $('.nav_bar').toggleClass('collapsed_expand');
     });
+
+    $("#byDesc").keyup(function () {
+        var query = $("#byDesc").val();
+        $.ajax({
+            type: "POST",
+            url: "Home/Search",
+            data: JSON.stringify($("#byDesc").val()),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (videosReturned) {
+                $("#returnedVideos").html(jsonToHtml(videosReturned));
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+    $("#filteDesc").on("click", function () {
+        console.log("by desc");
+        $("#myModal").modal('show');
+    });
+    $("#Search").keyup(function () {
+        var query = $("#Search").val();
+        $.ajax({
+            type: "POST",
+            url: "Explore/Search",
+            data: JSON.stringify($("#Search").val()),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (videosReturned) {
+                $("#returnedVideos").html(jsonToHtml(videosReturned));
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        });
+    });
+
+    function jsonToHtml(jsonVideos) {
+        var html = "";
+        html += "<div class='col-12 col-lg-12 videos'>";
+        for (var i = 0; i < jsonVideos.length; i++) {
+            console.log(jsonVideos[i]);
+            html += "<a href='/Video/Video/" + jsonVideos[i].url + "' class='removeLink'><div class='card columnCard col-lg-3 col-md-4 col-sm-6'><img class='card-img-top' src='/uploadedthumbnails/" + jsonVideos[i].thumbnail + "'alt='Card image cap'><div class='card-body'><img class='channel-pic' src='/css/images/profile.jpg' /><div class='video-info'><h6 class='video-title'>" + jsonVideos[i].title + "</h6><p class='video-channel'>LearnDotNet</p><p class='video-views video-time'>" + jsonVideos[i].viewsCount + " views<span class='dot'>.</span>" + jsonVideos[i].timeLine + " </p></div></div></div></a>";
+        }
+        html += "</div>"
+        return html;
+    }
 </script>
 }
-@* "DefaultConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=YouTubeV2;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" *@
